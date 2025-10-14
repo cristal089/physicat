@@ -5,6 +5,7 @@ using static UnityEngine.UI.Image;
 public class Player : MonoBehaviour
 {
     [SerializeField] float jumpForce;
+    [SerializeField] float speedX;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] float rayLength = 0.1f;
 
@@ -13,6 +14,7 @@ public class Player : MonoBehaviour
     Animator _animator;
     bool _isGrounded;
     bool _jumpBtnPressed;
+    float _xDir;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -22,8 +24,12 @@ public class Player : MonoBehaviour
         _animator = GetComponent<Animator>();
 
         _animator.SetBool("jump", false);
-        //_animator.speed = 0.3f;
         _animator.enabled = true;
+    }
+
+    void FixedUpdate()
+    {
+        Move();
     }
 
     void Update()
@@ -49,13 +55,21 @@ public class Player : MonoBehaviour
             _animator.SetBool("jump", true);
         }
     }
+    
+    void Move()
+    {
+        _rb.linearVelocityX = _xDir * speedX;
+    }
 
-
-    // Update is called once per frame
     void Jump()
     {
         _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, 0);
         _rb.AddForceY(jumpForce, ForceMode2D.Impulse);
+    }
+
+    void OnMove(InputValue inputValue)
+    {
+        _xDir = inputValue.Get<Vector2>().x;
     }
 
     void OnJump(InputValue inputValue)
