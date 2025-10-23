@@ -345,7 +345,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2067895, y: -0.27545995, z: -10}
+  m_LocalPosition: {x: 6.013211, y: -0.27545995, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -682,7 +682,7 @@ Transform:
   m_GameObject: {fileID: 780725450}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2067895, y: -0.27545995, z: -10}
+  m_LocalPosition: {x: 6.013211, y: -0.27545995, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -991,7 +991,7 @@ GameObject:
   - component: {fileID: 1240682750}
   - component: {fileID: 1240682749}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: LevelTimer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1011,6 +1011,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TimerController
   timerText: {fileID: 1899061406}
   remainingTime: 61
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  warningColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  dangerColor: {r: 1, g: 0, b: 0, a: 1}
+  flashColor: {r: 0.53333336, g: 0.007843138, b: 0.27058825, a: 1}
+  flashDuration: 0.2
 --- !u!114 &1240682750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1155,7 +1160,7 @@ Transform:
   m_GameObject: {fileID: 1426439631}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.3, y: -1.27, z: 0}
+  m_LocalPosition: {x: 0, y: -1.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

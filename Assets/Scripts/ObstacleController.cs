@@ -19,6 +19,15 @@ public class ObstacleController : MonoBehaviour
 
         _animator.enabled = true;
         _collider2D.enabled = false;
+
+        //verifica se o obstaculo colidiu com o jogador
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            //subtrai 2 segundos ao colidir com o jogador
+            TimerController timer = FindFirstObjectByType<TimerController>();
+            if (timer != null)
+                timer.SubtractTime(2f);
+        }
         Destroy(gameObject, 0.2f); //apos atingir o solo ou o jogador
     }
 }

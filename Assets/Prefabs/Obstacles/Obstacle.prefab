@@ -125,6 +125,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32406f4baa861a045a915a12488a90d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleController
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  rayLength: 0.1
 --- !u!50 &6003646605393328489
 Rigidbody2D:
   serializedVersion: 5

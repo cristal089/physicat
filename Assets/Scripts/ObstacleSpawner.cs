@@ -33,7 +33,6 @@ public class ObstacleSpawner : MonoBehaviour
         InvokeRepeating("SpawnObstacle", 0, 0.5f);
     }
 
-
     void SpawnObstacle()
     {
         int randomPos;
