@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 927669777876157674}
   m_Layer: 6
   m_Name: lab_ground_big (1)
-  m_TagString: Untagged
+  m_TagString: NormalGround
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 6325117288748780026}
   m_Layer: 6
   m_Name: lab_ground_big (2)
-  m_TagString: Untagged
+  m_TagString: NormalGround
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 2543202817847580402}
   m_Layer: 6
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: NormalGround
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -225,7 +225,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: b4ba9d3e1299cef43a5f807c4e62a03f, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -249,7 +249,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.097551346, y: -0.03550768}
+  m_Offset: {x: 0.097551346, y: -0.0025991201}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -259,7 +259,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 30.717495, y: 2.4882011}
+  m_Size: {x: 30.717495, y: 2.5540183}
   m_EdgeRadius: 0
 --- !u!1 &5894000444936866464
 GameObject:
@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 3143632699255522134}
   m_Layer: 6
   m_Name: lab_ground_big
-  m_TagString: Untagged
+  m_TagString: NormalGround
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

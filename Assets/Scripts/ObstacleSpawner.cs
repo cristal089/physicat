@@ -11,7 +11,7 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField, Range(0f, 1f)]
     List<float> spawnWeights = new List<float>();
 
-    //para guardar o indice do ultimo prefab e do ultimo spawner escolhidos
+    //para guardar o indice do ultimo prefab e do ultimo spawn escolhidos
     int lastPrefabIndex = -1;
     int lastSpawnIndex = -1;
 
@@ -29,7 +29,7 @@ public class ObstacleSpawner : MonoBehaviour
 
     void Start()
     {
-        //Invoracará a função "SpawnObstacle" no instante "0" e em seguida a cada meio segundo
+        //invoca a funcao "SpawnObstacle" no instante "0" e em seguida a cada segundo e meio
         InvokeRepeating("SpawnObstacle", 0, 1.5f);
     }
 
@@ -48,7 +48,8 @@ public class ObstacleSpawner : MonoBehaviour
         //escolhe o obstaculo utilizando peso e evitando repeticao de prefab
         int randomObstacle = PickWeightedRandomIndex();
 
-        Instantiate(obstaclesPrefabs[randomObstacle], spawnPositions[randomPos].transform.position, Quaternion.identity);
+        Vector3 spawnPos = spawnPositions[randomPos].transform.position + Vector3.up * 0.1f;
+        Instantiate(obstaclesPrefabs[randomObstacle], spawnPos, Quaternion.identity);
     }
 
     int PickWeightedRandomIndex()
@@ -77,7 +78,6 @@ public class ObstacleSpawner : MonoBehaviour
                 break;
             }
         }
-
         //para evitar repetir o mesmo prefab de obstáculo
         if (selected == lastPrefabIndex && obstaclesPrefabs.Count > 1)
             selected = (selected + 1) % obstaclesPrefabs.Count;

@@ -12,17 +12,25 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 7f39ce325d38980469f44e936f91321a, type: 2}
+    - target: {fileID: 779022791300196124, guid: 4fcb0200dc7a6a349bb0cf45ee2ce7e2, type: 3}
+      propertyPath: m_Radius
+      value: 0.5621333
+      objectReference: {fileID: 0}
+    - target: {fileID: 779022791300196124, guid: 4fcb0200dc7a6a349bb0cf45ee2ce7e2, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0017752647
+      objectReference: {fileID: 0}
     - target: {fileID: 2597404757518432511, guid: 4fcb0200dc7a6a349bb0cf45ee2ce7e2, type: 3}
       propertyPath: m_Name
       value: ObstacleFootball
       objectReference: {fileID: 0}
     - target: {fileID: 8095586567718165128, guid: 4fcb0200dc7a6a349bb0cf45ee2ce7e2, type: 3}
       propertyPath: m_Size.x
-      value: 1.36
+      value: 1.14
       objectReference: {fileID: 0}
     - target: {fileID: 8095586567718165128, guid: 4fcb0200dc7a6a349bb0cf45ee2ce7e2, type: 3}
       propertyPath: m_Size.y
-      value: 1.36
+      value: 1.14
       objectReference: {fileID: 0}
     - target: {fileID: 8095586567718165128, guid: 4fcb0200dc7a6a349bb0cf45ee2ce7e2, type: 3}
       propertyPath: m_Sprite
@@ -76,49 +84,5 @@ PrefabInstance:
     - {fileID: 7562685263910068136, guid: 4fcb0200dc7a6a349bb0cf45ee2ce7e2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2576638602057301892, guid: 4fcb0200dc7a6a349bb0cf45ee2ce7e2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7089222547202538514}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fcb0200dc7a6a349bb0cf45ee2ce7e2, type: 3}
---- !u!1 &7468710975796540441 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2576638602057301892, guid: 4fcb0200dc7a6a349bb0cf45ee2ce7e2, type: 3}
-  m_PrefabInstance: {fileID: 4928132233438874525}
-  m_PrefabAsset: {fileID: 0}
---- !u!58 &7089222547202538514
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7468710975796540441}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.0053257346}
-  m_Radius: 0.672198

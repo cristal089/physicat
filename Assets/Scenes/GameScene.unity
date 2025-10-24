@@ -241,6 +241,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &413658314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 413658315}
+  m_Layer: 0
+  m_Name: Position (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &413658315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413658314}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.15, y: -4.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 474733696}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &474733695
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,6 +303,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1295446509}
+  - {fileID: 413658315}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &474733697
@@ -289,9 +321,13 @@ MonoBehaviour:
   obstaclesPrefabs:
   - {fileID: 1374001992776234610, guid: 50f6a68bc9f69d44093f2c92c3face03, type: 3}
   - {fileID: 6949032210801193826, guid: 5999ae6ab08f7f94a8f232be08087c8e, type: 3}
+  - {fileID: 5338612269815808867, guid: ff1d034e2dab3694d9ecd5202d758ba1, type: 3}
+  - {fileID: 8011916725665892566, guid: e0b9a4d03a99d1e4cb182b62ee42ddc9, type: 3}
   spawnWeights:
-  - 0.2
-  - 0.5
+  - 0.3
+  - 0.6
+  - 0.1
+  - 0.45
   spawnIntervalMin: 1
   spawnIntervalMax: 3
 --- !u!1 &519420028
@@ -468,7 +504,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000b568f377ff7ca0a4
+  m_ApplyToSortingLayers: 00000000b568f377ff7ca0a4c74c7a04
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -780,7 +816,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1532986113
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -5954900996503436756, guid: a5219b07ad73dcf4fbf3400d646ba276, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -941,7 +977,7 @@ Transform:
   m_GameObject: {fileID: 1295446508}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.08, y: -4.15, z: 0}
+  m_LocalPosition: {x: 8.08, y: -4.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

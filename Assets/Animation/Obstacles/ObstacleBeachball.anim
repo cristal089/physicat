@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ObstacleEightBall
+  m_Name: ObstacleBeachball
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,13 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 6511275393050142854, guid: 8b9247793bf06584f9a315028a705e39, type: 3}
+      value: {fileID: -5106504162003803412, guid: 43f9e4d14e3215e4c9acfdf775f7e94b, type: 3}
     - time: 0.083333336
-      value: {fileID: 487630396, guid: 8b9247793bf06584f9a315028a705e39, type: 3}
+      value: {fileID: 2140618312, guid: 43f9e4d14e3215e4c9acfdf775f7e94b, type: 3}
     - time: 0.16666667
-      value: {fileID: -1227894637, guid: 8b9247793bf06584f9a315028a705e39, type: 3}
+      value: {fileID: 1187188979, guid: 43f9e4d14e3215e4c9acfdf775f7e94b, type: 3}
     - time: 0.25
-      value: {fileID: 297540491, guid: 8b9247793bf06584f9a315028a705e39, type: 3}
+      value: {fileID: 868806876, guid: 43f9e4d14e3215e4c9acfdf775f7e94b, type: 3}
     attribute: m_Sprite
     path: Sprite
     classID: 212
@@ -50,10 +50,10 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 6511275393050142854, guid: 8b9247793bf06584f9a315028a705e39, type: 3}
-    - {fileID: 487630396, guid: 8b9247793bf06584f9a315028a705e39, type: 3}
-    - {fileID: -1227894637, guid: 8b9247793bf06584f9a315028a705e39, type: 3}
-    - {fileID: 297540491, guid: 8b9247793bf06584f9a315028a705e39, type: 3}
+    - {fileID: -5106504162003803412, guid: 43f9e4d14e3215e4c9acfdf775f7e94b, type: 3}
+    - {fileID: 2140618312, guid: 43f9e4d14e3215e4c9acfdf775f7e94b, type: 3}
+    - {fileID: 1187188979, guid: 43f9e4d14e3215e4c9acfdf775f7e94b, type: 3}
+    - {fileID: 868806876, guid: 43f9e4d14e3215e4c9acfdf775f7e94b, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

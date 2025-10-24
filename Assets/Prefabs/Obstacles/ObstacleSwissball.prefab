@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3970690899369823885
+--- !u!1001 &7934597415894678428
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9,41 +9,33 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -4585810478395444425, guid: 4fcb0200dc7a6a349bb0cf45ee2ce7e2, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4585810478395444425, guid: 4fcb0200dc7a6a349bb0cf45ee2ce7e2, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 563102ff5fc6989479aef2faa8925476, type: 2}
+      objectReference: {fileID: 9100000, guid: 93cc6644c45231d42a1aedf6715d92a5, type: 2}
     - target: {fileID: 779022791300196124, guid: 4fcb0200dc7a6a349bb0cf45ee2ce7e2, type: 3}
       propertyPath: m_Radius
-      value: 0.38686296
+      value: 0.9686756
       objectReference: {fileID: 0}
     - target: {fileID: 779022791300196124, guid: 4fcb0200dc7a6a349bb0cf45ee2ce7e2, type: 3}
       propertyPath: m_Offset.y
-      value: -0.026795596
+      value: -0.019326806
       objectReference: {fileID: 0}
     - target: {fileID: 2597404757518432511, guid: 4fcb0200dc7a6a349bb0cf45ee2ce7e2, type: 3}
       propertyPath: m_Name
-      value: ObstacleEightBall
-      objectReference: {fileID: 0}
-    - target: {fileID: 6003646605393328489, guid: 4fcb0200dc7a6a349bb0cf45ee2ce7e2, type: 3}
-      propertyPath: m_Mass
-      value: 1
+      value: ObstacleSwissball
       objectReference: {fileID: 0}
     - target: {fileID: 8095586567718165128, guid: 4fcb0200dc7a6a349bb0cf45ee2ce7e2, type: 3}
       propertyPath: m_Size.x
-      value: 3.2
+      value: 1.92
       objectReference: {fileID: 0}
     - target: {fileID: 8095586567718165128, guid: 4fcb0200dc7a6a349bb0cf45ee2ce7e2, type: 3}
       propertyPath: m_Size.y
-      value: 0.76
+      value: 1.92
       objectReference: {fileID: 0}
     - target: {fileID: 8095586567718165128, guid: 4fcb0200dc7a6a349bb0cf45ee2ce7e2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6511275393050142854, guid: 8b9247793bf06584f9a315028a705e39, type: 3}
+      objectReference: {fileID: -5468452224918298124, guid: d96cdbd5027a84746b4c0df56dc66b00, type: 3}
     - target: {fileID: 8095586567718165128, guid: 4fcb0200dc7a6a349bb0cf45ee2ce7e2, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1

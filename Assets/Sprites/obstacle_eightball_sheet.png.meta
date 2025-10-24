@@ -105,10 +105,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 80
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,20 +125,20 @@ TextureImporter:
       name: obstacle_eightball_sheet_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 80
         y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 80
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49a18925a094b1d48aff3e056c4b9dcc
-      internalID: 1760475840
+      spriteID: b952987ae3bc4944e9b5cce4be92a91c
+      internalID: 487630396
       vertices: []
       indices: 
       edges: []
@@ -147,20 +147,20 @@ TextureImporter:
       name: obstacle_eightball_sheet_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 160
         y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 80
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ddbd1c090af2ac4d8c48df260976d84
-      internalID: -1815450322
+      spriteID: a83f5c5f9d2423d4d9a1d8d998f24458
+      internalID: -1227894637
       vertices: []
       indices: 
       edges: []
@@ -169,20 +169,20 @@ TextureImporter:
       name: obstacle_eightball_sheet_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 240
         y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 80
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 129013b45dcb632499a123aaa0ca8e74
-      internalID: 1305488263
+      spriteID: 1408fc31351e1be40a02fb565e480c12
+      internalID: 297540491
       vertices: []
       indices: 
       edges: []
@@ -191,7 +191,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a5c669e5957c81b4e8f44a83cd36eb2a
+    spriteID: 544eb5fee9e93ac41b822107e0c3d185
     internalID: 0
     vertices: []
     indices: 
@@ -201,12 +201,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":80.0,"y":80.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       obstacle_eightball_sheet_0: 6511275393050142854
-      obstacle_eightball_sheet_1: 1760475840
-      obstacle_eightball_sheet_2: -1815450322
-      obstacle_eightball_sheet_3: 1305488263
+      obstacle_eightball_sheet_1: 487630396
+      obstacle_eightball_sheet_2: -1227894637
+      obstacle_eightball_sheet_3: 297540491
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
