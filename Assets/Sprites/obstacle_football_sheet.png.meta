@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: d2c02f115191950429821fed786c9dd7
+guid: 9776fb485105d804791d5fac18786061
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7073549938182397461
-    second: background_final_big_0
+      213: 7287068181745730011
+    second: obstacle_football_sheet_0
+  - first:
+      213: -6112574506870357852
+    second: obstacle_football_sheet_1
+  - first:
+      213: -4074543319959228204
+    second: obstacle_football_sheet_2
+  - first:
+      213: -8392897805714464509
+    second: obstacle_football_sheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,13 +49,13 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,10 +81,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,67 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: background_final_big_0
+      name: obstacle_football_sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 136
+        height: 136
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: be1e6a9fec3b5dd90800000000000000
-      internalID: -7073549938182397461
+      spriteID: bd1810b17edd02560800000000000000
+      internalID: 7287068181745730011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_final_big_1
+      name: obstacle_football_sheet_1
       rect:
         serializedVersion: 2
-        x: 1920
+        x: 143
         y: 0
-        width: 1920
-        height: 1080
+        width: 137
+        height: 136
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: bab689396996e824c8295448d30b30a0
-      internalID: 1061472232
+      spriteID: 4a042ee2fd5cb2ba0800000000000000
+      internalID: -6112574506870357852
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_final_big_2
+      name: obstacle_football_sheet_2
       rect:
         serializedVersion: 2
-        x: 3840
+        x: 287
         y: 0
-        width: 1920
-        height: 1080
+        width: 137
+        height: 136
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6bbcf3fd7d078804e930b3395a632268
-      internalID: -492128918
+      spriteID: 4d0b3e730705477c0800000000000000
+      internalID: -4074543319959228204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstacle_football_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 0
+        width: 137
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 301eb36c9ef668b80800000000000000
+      internalID: -8392897805714464509
       vertices: []
       indices: 
       edges: []
@@ -169,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 88fbb1d3136cbb947bf65f5fa4abd75e
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -177,13 +208,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      background_final_big_0: -7073549938182397461
-      background_final_big_1: 1061472232
-      background_final_big_2: -492128918
+      obstacle_football_sheet_0: 7287068181745730011
+      obstacle_football_sheet_1: -6112574506870357852
+      obstacle_football_sheet_2: -4074543319959228204
+      obstacle_football_sheet_3: -8392897805714464509
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

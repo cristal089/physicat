@@ -1,22 +1,22 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEngine.UI.Image;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] float jumpForce;
-    [SerializeField] float speedX;
+    [SerializeField] float jumpHeight = 2f; //o quao alto sera o pulo
+    [SerializeField] float jumpDuration = 0.4f; //quanto tempo o pulo gasta (para cima + para baixo)
     [SerializeField] LayerMask groundLayer;
     [SerializeField] float rayLength = 0.1f;
 
     Rigidbody2D _rb;
     Collider2D _col;
     Animator _animator;
+
     bool _isGrounded;
     bool _jumpBtnPressed;
-    float _xDir;
+    bool _isJumping;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -27,49 +27,51 @@ public class Player : MonoBehaviour
         _animator.enabled = true;
     }
 
-    void FixedUpdate()
-    {
-        Move();
-    }
-
     void Update()
     {
+        //define uma origem para detectar o chao usando Raycast e o collider da personagem
         Vector2 origin = (Vector2)_col.bounds.center;
-        float offset = _col.bounds.extents.y + 0.05f; // um pouco abaixo do fim do Collider
+        float offset = _col.bounds.extents.y + 0.05f; //um pouco abaixo do fim do collider
         Vector2 rayOrigin = origin + Vector2.down * offset;
 
+        //detecta se a personagem esta no chao para possibilitar o pulo
         _isGrounded = Physics2D.Raycast(rayOrigin, Vector2.down, rayLength, groundLayer);
 
-        if (_jumpBtnPressed && _isGrounded)
+        if (_jumpBtnPressed && _isGrounded && !_isJumping)
         {
-            Jump();
+            StartCoroutine(Jump());
             _jumpBtnPressed = false;
         }
 
-        if (_isGrounded)
-        {
-            _animator.SetBool("jump", false);
-        }
-        else
-        {
-            _animator.SetBool("jump", true);
-        }
-    }
-    
-    void Move()
-    {
-        _rb.linearVelocityX = _xDir * speedX;
+        _animator.SetBool("jump", !_isGrounded);
     }
 
-    void Jump()
+    IEnumerator Jump()
     {
-        _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, 0);
-        _rb.AddForceY(jumpForce, ForceMode2D.Impulse);
-    }
+        _isJumping = true;
 
-    void OnMove(InputValue inputValue)
-    {
-        _xDir = inputValue.Get<Vector2>().x;
+        //float halfDuration = jumpDuration / 2f;
+        float elapsed = 0f;
+        float startY = transform.position.y; //salva a posicao em que a personagem estava antes de pular
+
+        //personagem pula para cima
+        //usa movimento parabolico para ficar mais suave
+        while (elapsed < jumpDuration)
+        {
+            float t = elapsed / jumpDuration;
+            float heightFactor = 4 * t * (1 - t); //parabola 0->1->0
+            float newY = startY + heightFactor * jumpHeight;
+
+            transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        //move a personagem de volta para o chao para evitar erros
+        transform.position = new Vector3(transform.position.x, startY, transform.position.z);
+
+        _isJumping = false;
     }
 
     void OnJump(InputValue inputValue)

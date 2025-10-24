@@ -56,10 +56,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2203361393950799729, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2543202817847580402, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 6200000, guid: b333f28b277ce194aa4b40c1fe5009d6, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 3143632699255522134, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
       propertyPath: m_Color.b
       value: 0.6367924
@@ -72,9 +76,25 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3726448338501661927, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4097310427513749791, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
       propertyPath: m_Name
       value: GroundSlower
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097310427513749791, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097310427513749791, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
+      propertyPath: m_TagString
+      value: MudGround
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894000444936866464, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6325117288748780026, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
       propertyPath: m_Color.b

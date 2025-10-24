@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 8357909782911077549}
   - component: {fileID: 2446262914687342505}
   - component: {fileID: 6003646605393328489}
+  - component: {fileID: -4585810478395444425}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Untagged
@@ -125,10 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32406f4baa861a045a915a12488a90d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleController
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  rayLength: 0.1
+  baseSpeed: 10
 --- !u!50 &6003646605393328489
 Rigidbody2D:
   serializedVersion: 5
@@ -156,6 +154,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &-4585810478395444425
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2597404757518432511}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6978171723110548134
 GameObject:
   m_ObjectHideFlags: 0

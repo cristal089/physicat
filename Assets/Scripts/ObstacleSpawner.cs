@@ -29,8 +29,8 @@ public class ObstacleSpawner : MonoBehaviour
 
     void Start()
     {
-        //Invoracará a função "SpawnObstacle" no instante "0" e em seguida a cada meio segundo.
-        InvokeRepeating("SpawnObstacle", 0, 0.5f);
+        //Invoracará a função "SpawnObstacle" no instante "0" e em seguida a cada meio segundo
+        InvokeRepeating("SpawnObstacle", 0, 1.5f);
     }
 
     void SpawnObstacle()

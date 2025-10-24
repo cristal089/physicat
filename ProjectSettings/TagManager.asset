@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - IceGround
+  - MudGround
   layers:
   - Default
   - TransparentFX
@@ -13,8 +15,8 @@ TagManager:
   - UI
   - Ground
   - Player
-  - 
-  - 
+  - FasterGround
+  - SlowerGround
   - 
   - 
   - 
