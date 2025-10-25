@@ -7,7 +7,7 @@ namespace UI
     {
         public void Level1()
         {
-            SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene("Level1Dialogue");
         }
         
         public void Back()

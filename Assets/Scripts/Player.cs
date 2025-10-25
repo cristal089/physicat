@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField] float jumpForce = 10f;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] float rayLength = 0.1f;
-    [SerializeField] int maxJumps = 1;
+    [SerializeField] int maxJumps = 2;
 
     Rigidbody2D _rb;
     Collider2D _col;
@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
 
     int _jumpsLeft;
     bool _jumpBtnPressed;
+    bool _isGrounded;
+    bool _wasGroundedLastFrame;
 
 
     void Awake()
@@ -31,24 +33,21 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        bool isGrounded = CheckGrounded();
+        _isGrounded = CheckGrounded();
 
-        if (isGrounded)
+        if (_isGrounded && !_wasGroundedLastFrame)
         {
             //reseta o numero de pulos ao voltar para o chao
             _jumpsLeft = maxJumps;
-            _animator.SetBool("jump", false);
         }
-        else
-        {
-            _animator.SetBool("jump", true);
-        }
+        _animator.SetBool("jump", !_isGrounded);
 
         if (_jumpBtnPressed && _jumpsLeft > 0)
         {
             DoJump();
             _jumpBtnPressed = false;
         }
+        _wasGroundedLastFrame = _isGrounded;
     }
 
     bool CheckGrounded()

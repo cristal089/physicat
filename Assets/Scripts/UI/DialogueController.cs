@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class DialogueController : MonoBehaviour
 {
@@ -47,7 +48,7 @@ public class DialogueController : MonoBehaviour
         }
         else
         {
-            gameObject.SetActive(false);
+            SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
         }
     }
 

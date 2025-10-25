@@ -9,10 +9,10 @@ namespace UI
         {
             SceneManager.LoadScene("LevelsMenu");
         }
-        
+
         public void Exit()
         {
-            Application.Quit();//SÃ³ funciona em uma build fora do editor.
+            Application.Quit();//Só funciona em uma build fora do editor.
         }
     }
 }

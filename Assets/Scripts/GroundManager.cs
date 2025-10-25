@@ -14,6 +14,9 @@ public class GroundManager : MonoBehaviour
 
     void Start()
     {
+        //reseta a semente randomica toda vez que a scene for carregada
+        Random.InitState(System.Environment.TickCount);
+
         tiles = new GameObject[tileCount];
         for (int i = 0; i < tileCount; i++)
         {

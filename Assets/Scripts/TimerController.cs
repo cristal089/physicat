@@ -1,6 +1,7 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
-using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class TimerController : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class TimerController : MonoBehaviour
         {
             remainingTime = 0;
             //GameOver
+            SceneManager.LoadScene("GameOver");
         }
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);

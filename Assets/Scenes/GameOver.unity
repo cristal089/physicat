@@ -622,7 +622,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1019265278}
-  - component: {fileID: 1019265277}
+  - component: {fileID: 1019265279}
   m_Layer: 0
   m_Name: MainUIController
   m_TagString: Untagged
@@ -630,18 +630,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1019265277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1019265276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bb8fd93e46f67949b8c3d189f2a54bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UI.MainUIController
 --- !u!4 &1019265278
 Transform:
   m_ObjectHideFlags: 0
@@ -657,6 +645,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1019265279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019265276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19fe761297d0f6443bf969f331c63cde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.GameOverController
 --- !u!1 &1277867357
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,8 +843,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1019265277}
-        m_TargetAssemblyTypeName: UI.MainUIController, Assembly-CSharp
+      - m_Target: {fileID: 1019265279}
+        m_TargetAssemblyTypeName: UI.GameOverController, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
@@ -927,7 +927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -42, y: 388}
+  m_AnchoredPosition: {x: -110, y: 388}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1427783113
@@ -950,7 +950,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PhysiCat
+  m_text: GAME OVER
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a2edeca7710c4d2429a6cabfd897dc8d, type: 2}
   m_sharedMaterial: {fileID: -9213651741866743150, guid: a2edeca7710c4d2429a6cabfd897dc8d, type: 2}
@@ -1015,7 +1015,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -67.13782, y: 0, z: -211.80103, w: 0}
+  m_margin: {x: -67.13782, y: 0, z: -327.59033, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1086,7 +1086,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: sair
+  m_text: menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 83696763dd2fece46bbebbc37974d18a, type: 2}
   m_sharedMaterial: {fileID: 6345825058596454692, guid: 83696763dd2fece46bbebbc37974d18a, type: 2}
@@ -1248,9 +1248,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1019265277}
-        m_TargetAssemblyTypeName: UI.MainUIController, Assembly-CSharp
-        m_MethodName: Exit
+      - m_Target: {fileID: 1019265279}
+        m_TargetAssemblyTypeName: UI.GameOverController, Assembly-CSharp
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
