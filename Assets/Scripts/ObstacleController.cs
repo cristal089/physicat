@@ -85,7 +85,7 @@ public class ObstacleController : MonoBehaviour
             _animator.enabled = true;
             _collider2D.enabled = false;
 
-            Destroy(gameObject, 0.2f);
+            Destroy(gameObject, 0.1f);
         }
     }
 }

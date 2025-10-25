@@ -1,11 +1,11 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ObstacleSpawner : MonoBehaviour
 {
-    List<GameObject> spawnPositions;
-
     [SerializeField] List<GameObject> obstaclesPrefabs;
+    List<GameObject> spawnPositions;
 
     //atribuindo pesos aos prefabs de obstaculo para balancear a taxa de spawn
     [SerializeField, Range(0f, 1f)]
@@ -15,8 +15,8 @@ public class ObstacleSpawner : MonoBehaviour
     int lastPrefabIndex = -1;
     int lastSpawnIndex = -1;
 
-    [SerializeField] float spawnIntervalMin = 0.4f; //tempo minimo entre spawns
-    [SerializeField] float spawnIntervalMax = 0.7f; //tempo maximo entre spawns
+    [SerializeField] float minSpawnInterval = 0.4f; //tempo minimo entre spawns
+    [SerializeField] float maxSpawnInterval = 0.7f; //tempo maximo entre spawns
 
     void Awake()
     {
@@ -29,27 +29,33 @@ public class ObstacleSpawner : MonoBehaviour
 
     void Start()
     {
-        //invoca a funcao "SpawnObstacle" no instante "0" e em seguida a cada segundo e meio
-        InvokeRepeating("SpawnObstacle", 0, 1.5f);
+        StartCoroutine(SpawnObstaclesRandomly());
     }
 
-    void SpawnObstacle()
+    IEnumerator SpawnObstaclesRandomly()
     {
-        int randomPos;
-
-        //escolhe uma posicao de spawn diferente da anterior
-        do
+        while (true)
         {
-            randomPos = Random.Range(0, spawnPositions.Count);
-        } while (randomPos == lastSpawnIndex && spawnPositions.Count > 1);
+            int randomPos;
 
-        lastSpawnIndex = randomPos;
+            //escolhe uma posicao de spawn diferente da anterior
+            do
+            {
+                randomPos = Random.Range(0, spawnPositions.Count);
+            } while (randomPos == lastSpawnIndex && spawnPositions.Count > 1);
 
-        //escolhe o obstaculo utilizando peso e evitando repeticao de prefab
-        int randomObstacle = PickWeightedRandomIndex();
+            lastSpawnIndex = randomPos;
 
-        Vector3 spawnPos = spawnPositions[randomPos].transform.position + Vector3.up * 0.1f;
-        Instantiate(obstaclesPrefabs[randomObstacle], spawnPos, Quaternion.identity);
+            //escolhe o obstaculo utilizando peso e evitando repeticao de prefab
+            int randomObstacle = PickWeightedRandomIndex();
+
+            Vector3 spawnPos = spawnPositions[randomPos].transform.position + Vector3.up * 0.1f;
+            Instantiate(obstaclesPrefabs[randomObstacle], spawnPos, Quaternion.identity);
+
+            //espera por um periodo aleatorio antes de spawnar novamente
+            float waitTime = Random.Range(minSpawnInterval, maxSpawnInterval);
+            yield return new WaitForSeconds(waitTime);
+        }
     }
 
     int PickWeightedRandomIndex()

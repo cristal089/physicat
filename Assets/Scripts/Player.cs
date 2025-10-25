@@ -4,18 +4,18 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] float jumpHeight = 2f; //o quao alto sera o pulo
-    [SerializeField] float jumpDuration = 0.4f; //quanto tempo o pulo gasta (para cima + para baixo)
+    [SerializeField] float jumpForce = 10f;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] float rayLength = 0.1f;
+    [SerializeField] int maxJumps = 1;
 
     Rigidbody2D _rb;
     Collider2D _col;
     Animator _animator;
 
-    bool _isGrounded;
+    int _jumpsLeft;
     bool _jumpBtnPressed;
-    bool _isJumping;
+
 
     void Awake()
     {
@@ -25,53 +25,55 @@ public class Player : MonoBehaviour
 
         _animator.SetBool("jump", false);
         _animator.enabled = true;
+
+        _jumpsLeft = maxJumps;
     }
 
     void Update()
     {
-        //define uma origem para detectar o chao usando Raycast e o collider da personagem
-        Vector2 origin = (Vector2)_col.bounds.center;
-        float offset = _col.bounds.extents.y + 0.05f; //um pouco abaixo do fim do collider
-        Vector2 rayOrigin = origin + Vector2.down * offset;
+        bool isGrounded = CheckGrounded();
 
-        //detecta se a personagem esta no chao para possibilitar o pulo
-        _isGrounded = Physics2D.Raycast(rayOrigin, Vector2.down, rayLength, groundLayer);
-
-        if (_jumpBtnPressed && _isGrounded && !_isJumping)
+        if (isGrounded)
         {
-            StartCoroutine(Jump());
+            //reseta o numero de pulos ao voltar para o chao
+            _jumpsLeft = maxJumps;
+            _animator.SetBool("jump", false);
+        }
+        else
+        {
+            _animator.SetBool("jump", true);
+        }
+
+        if (_jumpBtnPressed && _jumpsLeft > 0)
+        {
+            DoJump();
             _jumpBtnPressed = false;
         }
-
-        _animator.SetBool("jump", !_isGrounded);
     }
 
-    IEnumerator Jump()
+    bool CheckGrounded()
     {
-        _isJumping = true;
+        //define uma origem para detectar o chao usando Raycast e o collider da personagem
+        Vector2 origin = (Vector2)_col.bounds.center;
 
-        //float halfDuration = jumpDuration / 2f;
-        float elapsed = 0f;
-        float startY = transform.position.y; //salva a posicao em que a personagem estava antes de pular
+        //um pouco abaixo do fim do collider
+        float offset = _col.bounds.extents.y + 0.05f;
 
-        //personagem pula para cima
-        //usa movimento parabolico para ficar mais suave
-        while (elapsed < jumpDuration)
-        {
-            float t = elapsed / jumpDuration;
-            float heightFactor = 4 * t * (1 - t); //parabola 0->1->0
-            float newY = startY + heightFactor * jumpHeight;
+        Vector2 rayOrigin = origin + Vector2.down * offset;
 
-            transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+        //retorna se a personagem esta no chao para possibilitar o pulo
+        return Physics2D.Raycast(rayOrigin, Vector2.down, rayLength, groundLayer);
+    }
 
-            elapsed += Time.deltaTime;
-            yield return null;
-        }
+    void DoJump()
+    {
+        //reseta a velocidade vertical
+        _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, 0f);
 
-        //move a personagem de volta para o chao para evitar erros
-        transform.position = new Vector3(transform.position.x, startY, transform.position.z);
+        //aplica o impulso para pular
+        _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 
-        _isJumping = false;
+        _jumpsLeft--;
     }
 
     void OnJump(InputValue inputValue)
