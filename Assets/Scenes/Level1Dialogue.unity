@@ -516,11 +516,11 @@ MonoBehaviour:
     experimentos com atrito.
   - "Por\xE9m, por causa da instabilidade do buraco negro, meu laborat\xF3rio est\xE1
     virando uma verdadeira bagun\xE7a."
-  - "Os objetos que uso para estudar atrito est\xE3o sendo empurrados em minha dire\xE7\xE3o,
-    dificultando o caminho at\xE9 nosso objetivo."
+  - "A tubula\xE7\xE3o de ar se quebrou e vento est\xE1 empurrando meus instrumentos
+    de estudo em minha dire\xE7\xE3o."
   - "Preciso de sua ajuda para desviar desses obst\xE1culos. Mas preste aten\xE7\xE3o!"
-  - "Cada tipo de ch\xE3o nesta sala possui um fator de atrito diferente, podendo
-    acelerar ou desacelerar os obst\xE1culos!"
+  - "Cada tipo de ch\xE3o nesta sala possui um fator de atrito diferente, o que influencia
+    na acelera\xE7\xE3o dos obst\xE1culos!"
   textSpeed: 0.05
 --- !u!114 &887714145
 MonoBehaviour:
