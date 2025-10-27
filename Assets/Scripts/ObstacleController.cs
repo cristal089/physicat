@@ -36,7 +36,6 @@ public class ObstacleController : MonoBehaviour
 
     void MoveObstacle()
     {
-        //Debug.Log($"{gameObject.name}: {_currentSpeed}");
         _rb.linearVelocity = new Vector2(-_currentSpeed, 0f);
     }
     void DetectGround()
@@ -63,12 +62,10 @@ public class ObstacleController : MonoBehaviour
                     break;
             }
         }
-        //Debug.DrawRay(origin, Vector2.down * rayLength, Color.red);
-    }    
+    }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        //Debug.Log($"{gameObject.name} triggered by {collider.name} with tag {collider.tag}");
         if (_hasCollided) return; //para evitar que o trigger da colisao ocorra duas vezes
 
         //checa se colidiu com o jogador
