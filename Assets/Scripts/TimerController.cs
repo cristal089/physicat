@@ -2,11 +2,11 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class TimerController : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
-    [SerializeField] float remainingTime;
 
     //controle de cor do temporizador
     [SerializeField] Color normalColor = Color.white; //cor padrao do temporizador
@@ -17,38 +17,79 @@ public class TimerController : MonoBehaviour
 
     bool isFlashing = false;
 
+    //controle de derrota ou vitoria da fase
+    [SerializeField] GameObject doorPrefab;
+    [SerializeField] Transform doorSpawnPoint;
+    [SerializeField] bool doorSpawned = false;
+    [SerializeField] float totalTime = 60f;
+    float _timeRemaining;
+    float _timeSurvived;
+
+    //controle da conquista desbloqueada
+    [SerializeField] AchievementController achievementController;
+    private bool achievementShown = false;
+
+    void Start()
+    {
+        _timeRemaining = totalTime;
+        _timeSurvived = 0f;
+    }
+
     void Update()
     {
-        if (remainingTime > 0) 
+        float delta = Time.deltaTime;
+
+        //registra quanto tempo o jogador sobreviveu na fase
+        _timeSurvived += delta;
+
+        if (_timeRemaining > 0) 
         {
-            if (!isFlashing && remainingTime >= 30)
+            if (!isFlashing && _timeRemaining >= 30)
                 timerText.color = normalColor;
-            else if (!isFlashing && remainingTime >= 15)
+            else if (!isFlashing && _timeRemaining >= 15)
                 timerText.color = warningColor;
             else if (!isFlashing)
                 timerText.color = dangerColor;
 
-                remainingTime -= Time.deltaTime;
+            _timeRemaining -= delta;
         }
-        else if (remainingTime <= 0)
+
+        //para desbloquear a conquista o jogador deve sobreviver por 30 segundos no total
+        if (!achievementShown && _timeSurvived >= 30f)
         {
-            remainingTime = 0;
-            //GameOver
+            achievementController.ShowAchievement();
+            achievementShown = true;
+        }
+
+        //para vencer o jogador deve sobreviver por 45 segundos no total
+        if (!doorSpawned && _timeSurvived >= 45f)
+        {
+            ObstacleSpawner spawner = FindFirstObjectByType<ObstacleSpawner>();
+            if (spawner != null)
+                spawner.StopAllCoroutines();
+            SpawnDoor();
+        }
+        
+        //o jogador perde se nao sobreviver por 50 segundos e seu tempo acabar
+        if (_timeRemaining <= 0)
+        {
+            _timeRemaining = 0;
+            //game over
             SceneManager.LoadScene("GameOver");
         }
-        int minutes = Mathf.FloorToInt(remainingTime / 60);
-        int seconds = Mathf.FloorToInt(remainingTime % 60);
+        int minutes = Mathf.FloorToInt(_timeRemaining / 60);
+        int seconds = Mathf.FloorToInt(_timeRemaining % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     public void SubtractTime(float seconds)
     {
-        remainingTime -= seconds;
-        if (remainingTime < 0)
-            remainingTime = 0;
+        _timeRemaining -= seconds;
+        if (_timeRemaining < 0)
+            _timeRemaining = 0;
 
         //faz o temporizador piscar de vermelho quando o jogador atinge obstaculos
-        StopAllCoroutines(); //para qualquer flash anterior
+        StopAllCoroutines(); //faz parar qualquer flash anterior
         StartCoroutine(FlashRed());
     }
 
@@ -62,5 +103,11 @@ public class TimerController : MonoBehaviour
 
         timerText.color = currentColor;
         isFlashing = false;
+    }
+
+    void SpawnDoor()
+    {
+        Instantiate(doorPrefab, doorSpawnPoint.position, Quaternion.identity);
+        doorSpawned = true;
     }
 }

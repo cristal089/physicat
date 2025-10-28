@@ -38,6 +38,7 @@ public class ObstacleController : MonoBehaviour
     {
         _rb.linearVelocity = new Vector2(-_currentSpeed, 0f);
     }
+
     void DetectGround()
     {
         //cria um "raycast" para baixo para detectar o chao

@@ -32,7 +32,7 @@ public class ObstacleSpawner : MonoBehaviour
         StartCoroutine(SpawnObstaclesRandomly());
     }
 
-    IEnumerator SpawnObstaclesRandomly()
+    public IEnumerator SpawnObstaclesRandomly()
     {
         while (true)
         {

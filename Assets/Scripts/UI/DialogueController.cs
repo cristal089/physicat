@@ -67,4 +67,13 @@ public class DialogueController : MonoBehaviour
             NextLine();
         }
     }
+
+    void OnSkip(InputValue inputValue)
+    {
+        //mostra a linha completa
+        StopAllCoroutines();
+        textComponent.text = lines[_index];
+        _isTyping = false;
+        SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
+    }
 }
