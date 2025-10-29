@@ -5,6 +5,11 @@ namespace UI
 {
     public class MainUIController : MonoBehaviour
     {
+        void Awake()
+        {
+            Time.timeScale = 1f;
+        }
+
         void Start()
         {
             //apenas para testes, apagar depois
@@ -19,7 +24,7 @@ namespace UI
 
         public void Exit()
         {
-            Application.Quit();//Só funciona em uma build fora do editor.
+            Application.Quit(); //so funciona em uma build fora do editor
         }
     }
 }

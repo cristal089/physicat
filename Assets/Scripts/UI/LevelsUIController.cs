@@ -5,6 +5,11 @@ namespace UI
 {
     public class LevelsUIController : MonoBehaviour
     {
+        void Awake()
+        {
+            Time.timeScale = 1f;
+        }
+
         public void Level1()
         {
             SceneManager.LoadScene("Level1Dialogue", LoadSceneMode.Single);

@@ -13,6 +13,11 @@ public class DialogueController : MonoBehaviour
     int _index;
     bool _isTyping;
 
+    void Awake()
+    {
+        Time.timeScale = 1f;
+    }
+
     void Start()
     {
         textComponent.text = string.Empty;
@@ -33,7 +38,7 @@ public class DialogueController : MonoBehaviour
         foreach (char c in lines[_index].ToCharArray())
         {
             textComponent.text += c;
-            yield return new WaitForSeconds(textSpeed);
+            yield return new WaitForSecondsRealtime(textSpeed);
         }
         _isTyping = false;
     }

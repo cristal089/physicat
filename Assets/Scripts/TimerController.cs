@@ -30,6 +30,11 @@ public class TimerController : MonoBehaviour
     [SerializeField] AchievementController achievementController;
     private bool achievementShown = false;
 
+    void Awake()
+    {
+        Time.timeScale = 1f;
+    }
+
     void Start()
     {
         _timeRemaining = totalTime;

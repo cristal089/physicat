@@ -5,6 +5,10 @@ namespace UI
 {
     public class GameOverController : MonoBehaviour
     {
+        void Awake()
+        {
+            Time.timeScale = 1f;
+        }
         public void StartGame()
         {
             SceneManager.LoadScene("LevelsMenu", LoadSceneMode.Single);
