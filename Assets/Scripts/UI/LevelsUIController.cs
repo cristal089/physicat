@@ -9,6 +9,11 @@ namespace UI
         {
             SceneManager.LoadScene("Level1Dialogue");
         }
+
+        public void Level2()
+        {
+            SceneManager.LoadScene("Level2Dialogue");
+        }
         
         public void Back()
         {
