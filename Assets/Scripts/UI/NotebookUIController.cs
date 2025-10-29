@@ -27,6 +27,6 @@ public class NotebookUIController : MonoBehaviour
 
     public void Exit()
     {
-        SceneManager.LoadScene("LevelsMenu");
+        SceneManager.LoadScene("LevelsMenu", LoadSceneMode.Single);
     }
 }

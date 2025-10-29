@@ -7,12 +7,12 @@ namespace UI
     {
         public void StartGame()
         {
-            SceneManager.LoadScene("LevelsMenu");
+            SceneManager.LoadScene("LevelsMenu", LoadSceneMode.Single);
         }
 
         public void MainMenu()
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
         }
     }
 }

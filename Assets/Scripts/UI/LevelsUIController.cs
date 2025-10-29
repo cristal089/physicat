@@ -7,17 +7,17 @@ namespace UI
     {
         public void Level1()
         {
-            SceneManager.LoadScene("Level1Dialogue");
+            SceneManager.LoadScene("Level1Dialogue", LoadSceneMode.Single);
         }
         
         public void Back()
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
         }
 
         public void OpenNotebook1()
         {
-            SceneManager.LoadScene("Level1Explanation");
+            SceneManager.LoadScene("Level1Explanation", LoadSceneMode.Single);
         }
     }
 }

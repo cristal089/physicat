@@ -14,7 +14,7 @@ namespace UI
 
         public void StartGame()
         {
-            SceneManager.LoadScene("LevelsMenu");
+            SceneManager.LoadScene("LevelsMenu", LoadSceneMode.Single);
         }
 
         public void Exit()

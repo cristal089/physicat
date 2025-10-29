@@ -76,7 +76,7 @@ public class TimerController : MonoBehaviour
         {
             _timeRemaining = 0;
             //game over
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
         }
         int minutes = Mathf.FloorToInt(_timeRemaining / 60);
         int seconds = Mathf.FloorToInt(_timeRemaining % 60);

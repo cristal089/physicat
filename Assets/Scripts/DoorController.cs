@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorController : MonoBehaviour
 {
@@ -22,6 +23,6 @@ public class DoorController : MonoBehaviour
     {
         Debug.Log("Você venceu!");
         Time.timeScale = 0f;
-        //LoadScene("LevelWon");
+        SceneManager.LoadScene("LevelWon", LoadSceneMode.Single);
     }
 }
