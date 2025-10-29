@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 12709c127992d6c4ab2d96c1997363b2
+guid: 94b080df35584214781b2dc8f9a4029e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2216615161505979934
-    second: lab_ground_big_0
+      213: -8413779167030306924
+    second: lab_ground_big_2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lab_ground_big_0
+      name: lab_ground_big_2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2e1e0b631400d31e0800000000000000
-      internalID: -2216615161505979934
+      spriteID: 497939afc604c3b80800000000000000
+      internalID: -8413779167030306924
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lab_ground_big_0: -2216615161505979934
+      lab_ground_big_2_0: -8413779167030306924
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

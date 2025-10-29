@@ -149,7 +149,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 63b3849e70771134790bcf4372921a90, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2254,7 +2254,7 @@ MonoBehaviour:
   player: {fileID: 1426439632}
   groundPosReference: {fileID: 974404728}
   tileCount: 5
-  tileWidth: 30
+  tileWidth: 30.5
   scrollSpeed: 3
 --- !u!4 &1895790508
 Transform:

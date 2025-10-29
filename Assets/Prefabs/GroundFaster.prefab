@@ -9,12 +9,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 927669777876157674, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d20ee51b4ec839342924372265f42df9, type: 3}
+    - target: {fileID: 927669777876157674, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 927669777876157674, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
       propertyPath: m_Color.g
-      value: 0.9882353
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 927669777876157674, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
       propertyPath: m_Color.r
-      value: 0.6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1527412635280770340, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -69,16 +77,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3143632699255522134, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d20ee51b4ec839342924372265f42df9, type: 3}
+    - target: {fileID: 3143632699255522134, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3143632699255522134, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
       propertyPath: m_Color.g
-      value: 0.9857604
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3143632699255522134, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
       propertyPath: m_Color.r
-      value: 0.5990566
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3726448338501661927, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
       propertyPath: m_Layer
@@ -109,12 +121,20 @@ PrefabInstance:
       value: IceGround
       objectReference: {fileID: 0}
     - target: {fileID: 6325117288748780026, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d20ee51b4ec839342924372265f42df9, type: 3}
+    - target: {fileID: 6325117288748780026, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6325117288748780026, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
       propertyPath: m_Color.g
-      value: 0.9882353
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6325117288748780026, guid: 68607fa9a918d9a4a85636cbcfacd4fb, type: 3}
       propertyPath: m_Color.r
-      value: 0.6
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
