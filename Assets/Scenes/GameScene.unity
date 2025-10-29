@@ -778,7 +778,7 @@ GameObject:
   - component: {fileID: 589486900}
   - component: {fileID: 589486904}
   m_Layer: 5
-  m_Name: Achievement
+  m_Name: AchievementCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -958,6 +958,54 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &619706983
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 619706985}
+  - component: {fileID: 619706984}
+  m_Layer: 0
+  m_Name: AchievementManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &619706984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619706983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754593498e3a34e499291c9d0c967b3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AchievementManager
+  achievementController: {fileID: 2076423522}
+  achievements:
+  - id: 30s
+    unlocked: 0
+--- !u!4 &619706985
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619706983}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1325.8918, y: 556.55756, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1315,7 +1363,7 @@ MonoBehaviour:
   doorSpawnPoint: {fileID: 286339014}
   doorSpawned: 0
   totalTime: 61
-  achievementController: {fileID: 2076423522}
+  achievementManager: {fileID: 619706984}
 --- !u!114 &1240682750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1971,7 +2019,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\"anota\xE7\xF5es 1 - atrito\" desbloqueada"
+  m_text: "\"anota\xE7\xF5es - atrito\" desbloqueada"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 83696763dd2fece46bbebbc37974d18a, type: 2}
   m_sharedMaterial: {fileID: 6345825058596454692, guid: 83696763dd2fece46bbebbc37974d18a, type: 2}
@@ -2484,7 +2532,7 @@ GameObject:
   - component: {fileID: 2076423522}
   - component: {fileID: 2076423524}
   m_Layer: 0
-  m_Name: AchievementManager
+  m_Name: AchievementUIController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2635,3 +2683,4 @@ SceneRoots:
   - {fileID: 98053530}
   - {fileID: 589486903}
   - {fileID: 2076423523}
+  - {fileID: 619706985}

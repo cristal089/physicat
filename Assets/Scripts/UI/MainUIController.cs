@@ -5,6 +5,13 @@ namespace UI
 {
     public class MainUIController : MonoBehaviour
     {
+        void Start()
+        {
+            //apenas para testes, apagar depois
+            PlayerPrefs.DeleteAll();
+            PlayerPrefs.Save();
+        }
+
         public void StartGame()
         {
             SceneManager.LoadScene("LevelsMenu");

@@ -820,7 +820,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 125}
+  m_SizeDelta: {x: 320, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1289058927
 MonoBehaviour:
@@ -851,10 +851,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 1858459237608131054, guid: 0dd28c84ea8349544933a82e21b52400, type: 3}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 1858459237608131054, guid: 0dd28c84ea8349544933a82e21b52400, type: 3}
-    m_DisabledSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300020, guid: 0e199325ccd4242429396b9293d2404d, type: 3}
+    m_PressedSprite: {fileID: 21300020, guid: 0e199325ccd4242429396b9293d2404d, type: 3}
+    m_SelectedSprite: {fileID: 21300020, guid: 0e199325ccd4242429396b9293d2404d, type: 3}
+    m_DisabledSprite: {fileID: 21300020, guid: 0e199325ccd4242429396b9293d2404d, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -1225,7 +1225,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 125}
+  m_SizeDelta: {x: 320, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1798379529
 MonoBehaviour:
@@ -1256,10 +1256,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 1858459237608131054, guid: 0dd28c84ea8349544933a82e21b52400, type: 3}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 1858459237608131054, guid: 0dd28c84ea8349544933a82e21b52400, type: 3}
-    m_DisabledSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300020, guid: 0e199325ccd4242429396b9293d2404d, type: 3}
+    m_PressedSprite: {fileID: 21300020, guid: 0e199325ccd4242429396b9293d2404d, type: 3}
+    m_SelectedSprite: {fileID: 21300020, guid: 0e199325ccd4242429396b9293d2404d, type: 3}
+    m_DisabledSprite: {fileID: 21300020, guid: 0e199325ccd4242429396b9293d2404d, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted

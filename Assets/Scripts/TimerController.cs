@@ -26,6 +26,7 @@ public class TimerController : MonoBehaviour
     float _timeSurvived;
 
     //controle da conquista desbloqueada
+    [SerializeField] AchievementManager achievementManager;
     [SerializeField] AchievementController achievementController;
     private bool achievementShown = false;
 
@@ -55,9 +56,9 @@ public class TimerController : MonoBehaviour
         }
 
         //para desbloquear a conquista o jogador deve sobreviver por 30 segundos no total
-        if (!achievementShown && _timeSurvived >= 30f)
+        if (!achievementShown && _timeSurvived >= 30f && !achievementManager.IsUnlocked("30s"))
         {
-            achievementController.ShowAchievement();
+            achievementManager.UnlockAchievement("30s");
             achievementShown = true;
         }
 
