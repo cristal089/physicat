@@ -14,5 +14,10 @@ namespace UI
         {
             SceneManager.LoadScene("MainMenu");
         }
+
+        public void OpenNotebook1()
+        {
+            SceneManager.LoadScene("Level1Explanation");
+        }
     }
 }
