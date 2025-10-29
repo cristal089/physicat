@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ObstacleLevel2 : MonoBehaviour
 {
-    public GameObject panel; 
+    [SerializeField] GameObject painel; 
     public Sprite novoSprite;               // sprite que aparecerá após a colisão
     private SpriteRenderer spriteRenderer;
     Rigidbody2D _rb;
@@ -28,9 +28,8 @@ public class ObstacleLevel2 : MonoBehaviour
         _currentSpeed = baseSpeed;
 
 
-        // Garante que o painel comece desativado
-        // if (panel != null)
-        //     panel.SetActive(false);
+         if (painel != null)
+             painel.SetActive(false);
     }
 
     void Update()
@@ -82,9 +81,9 @@ public class ObstacleLevel2 : MonoBehaviour
             print("bateu");
 
                 
-             if (panel != null){
+             if (painel != null){
                 print("painel abre");
-                panel.SetActive(true);
+                painel.SetActive(true);
 
                 }
 
