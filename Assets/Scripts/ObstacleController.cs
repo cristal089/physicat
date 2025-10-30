@@ -16,12 +16,19 @@ public class ObstacleController : MonoBehaviour
     [SerializeField] float rayLength = 1f; //para detectar o chao
 
     [SerializeField] LayerMask playerLayer;
+    [SerializeField] AudioClip hitSound;
+
+    [SerializeField] Color flashColor; //cor quando o jogador atinge o obstaculo
+    [SerializeField] float flashDuration = 0.2f; //tempo de flash do temporizador ao atingir o obstaculo
+    SpriteRenderer _sprite;
+    bool isFlashing = false;
 
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
         _collider2D = GetComponentInChildren<Collider2D>();
         _animator = GetComponent<Animator>();
+        _sprite = GetComponentInChildren<SpriteRenderer>();
 
         _currentSpeed = baseSpeed;
 
@@ -75,15 +82,30 @@ public class ObstacleController : MonoBehaviour
             if (_hasCollided) return;
             _hasCollided = true;
 
+            AudioSource.PlayClipAtPoint(hitSound, transform.position);
+
+            //faz o obstaculo piscar de vermelho quando atinge o jogador e despawna
+            StopAllCoroutines(); //faz parar qualquer flash anterior
+            StartCoroutine(FlashRed());
+
             //subtrai 2 segundos ao colidir com o jogador
             TimerController timer = FindFirstObjectByType<TimerController>();
             if (timer != null)
                 timer.SubtractTime(2f);
 
-            _animator.enabled = true;
             _collider2D.enabled = false;
-
-            Destroy(gameObject, 0.1f);
         }
+    }
+
+    IEnumerator FlashRed()
+    {
+        isFlashing = true;
+        Color currentColor = _sprite.color;
+        _sprite.color = flashColor;
+
+        yield return new WaitForSecondsRealtime(flashDuration);
+
+        _sprite.color = currentColor;
+        isFlashing = false;
     }
 }

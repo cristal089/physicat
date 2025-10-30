@@ -11,10 +11,6 @@ public class AchievementManager : MonoBehaviour
     //registra as conquistas
     void Start()
     {
-        //apenas para testes, apagar depois
-        PlayerPrefs.DeleteAll();
-        PlayerPrefs.Save();
-
         if (achievements.Count == 0)
         {
             achievements.Add(new Achievement("30s"));

@@ -14,7 +14,6 @@ public class TimerController : MonoBehaviour
     [SerializeField] Color dangerColor = Color.red; //cor abaixo dos 15 segundos
     [SerializeField] Color flashColor; //cor quando o jogador atinge um obstaculo
     [SerializeField] float flashDuration = 0.2f; //tempo de flash do temporizador ao atingir um obstaculo
-
     bool isFlashing = false;
 
     //controle de derrota ou vitoria da fase
@@ -105,7 +104,7 @@ public class TimerController : MonoBehaviour
         Color currentColor = timerText.color;
         timerText.color = flashColor;
 
-        yield return new WaitForSeconds(flashDuration);
+        yield return new WaitForSecondsRealtime(flashDuration);
 
         timerText.color = currentColor;
         isFlashing = false;
