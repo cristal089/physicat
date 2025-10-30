@@ -21,8 +21,15 @@ public class DoorController : MonoBehaviour
 
     void LevelWon()
     {
-        Debug.Log("Você venceu!");
         Time.timeScale = 0f;
+        UnlockNextLevel(2);
         SceneManager.LoadScene("LevelWon", LoadSceneMode.Single);
+    }
+
+    public void UnlockNextLevel(int nextLevelIndex)
+    {
+        string key = $"Level{nextLevelIndex}Unlocked";
+        PlayerPrefs.SetInt(key, 1);
+        PlayerPrefs.Save();
     }
 }

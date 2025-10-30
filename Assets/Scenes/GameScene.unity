@@ -1362,7 +1362,7 @@ MonoBehaviour:
   doorPrefab: {fileID: 161682417675450922, guid: e3f598008652dd54ea60332d07d65d07, type: 3}
   doorSpawnPoint: {fileID: 286339014}
   doorSpawned: 0
-  totalTime: 61
+  totalTime: 60
   achievementManager: {fileID: 619706984}
   achievementController: {fileID: 0}
 --- !u!114 &1240682750
