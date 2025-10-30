@@ -78,8 +78,6 @@ public class ObstacleLevel2 : MonoBehaviour
         {
             _hasCollided = true;
 
-            print("bateu");
-
                 
              if (painel != null){
                 print("painel abre");
