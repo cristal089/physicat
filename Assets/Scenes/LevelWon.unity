@@ -135,7 +135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &64310095
 AudioSource:
   m_ObjectHideFlags: 0
@@ -747,6 +747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a16ebc8effc8844ea91898ab566f462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelWonController
+  levelWonMusic: {fileID: 8300000, guid: fcd5f441b6a38dd4c9fea6195391957c, type: 3}
 --- !u!1 &1277867357
 GameObject:
   m_ObjectHideFlags: 0

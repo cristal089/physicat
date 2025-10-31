@@ -29,4 +29,5 @@ public class NotebookUIController : MonoBehaviour
     {
         SceneManager.LoadScene("LevelsMenu", LoadSceneMode.Single);
     }
+
 }

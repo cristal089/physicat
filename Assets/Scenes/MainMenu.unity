@@ -129,8 +129,9 @@ GameObject:
   m_Component:
   - component: {fileID: 64310096}
   - component: {fileID: 64310095}
+  - component: {fileID: 64310097}
   m_Layer: 0
-  m_Name: MusicaFundo
+  m_Name: MusicManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -248,6 +249,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &64310097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64310094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 740f0c4612259f54e9375d1ab6c555d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicManager
+  menuMusic: {fileID: 8300000, guid: e29ca74905a794649b98f8d179a33c40, type: 3}
+  notebookReadingMusic: {fileID: 8300000, guid: 2c1d71b93fc98f043bcb71afa94635e6, type: 3}
+  level1Music: {fileID: 8300000, guid: 63b3849e70771134790bcf4372921a90, type: 3}
+  level2Music: {fileID: 8300000, guid: 63b3849e70771134790bcf4372921a90, type: 3}
+  levelWonMusic: {fileID: 8300000, guid: fcd5f441b6a38dd4c9fea6195391957c, type: 3}
 --- !u!1 &153738168
 GameObject:
   m_ObjectHideFlags: 0
