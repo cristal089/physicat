@@ -5,8 +5,6 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     [SerializeField] float jumpForce = 10f;
-    [SerializeField] LayerMask groundLayer;
-    [SerializeField] float rayLength = 0.1f;
     [SerializeField] int maxJumps = 2;
 
     Rigidbody2D _rb;
@@ -33,8 +31,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        _isGrounded = CheckGrounded();
-
         if (_isGrounded && !_wasGroundedLastFrame)
         {
             //reseta o numero de pulos ao voltar para o chao
@@ -48,20 +44,6 @@ public class Player : MonoBehaviour
             _jumpBtnPressed = false;
         }
         _wasGroundedLastFrame = _isGrounded;
-    }
-
-    bool CheckGrounded()
-    {
-        //define uma origem para detectar o chao usando Raycast e o collider da personagem
-        Vector2 origin = (Vector2)_col.bounds.center;
-
-        //um pouco abaixo do fim do collider
-        float offset = _col.bounds.extents.y + 0.05f;
-
-        Vector2 rayOrigin = origin + Vector2.down * offset;
-
-        //retorna se a personagem esta no chao para possibilitar o pulo
-        return Physics2D.Raycast(rayOrigin, Vector2.down, rayLength, groundLayer);
     }
 
     void DoJump()
@@ -78,5 +60,29 @@ public class Player : MonoBehaviour
     void OnJump(InputValue inputValue)
     {
         _jumpBtnPressed = inputValue.isPressed;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            _isGrounded = true;
+        }
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            _isGrounded = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            _isGrounded = false;
+        }
     }
 }
