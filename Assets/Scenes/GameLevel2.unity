@@ -3541,6 +3541,7 @@ GameObject:
   - component: {fileID: 1426439634}
   - component: {fileID: 1426439635}
   - component: {fileID: 1426439636}
+  - component: {fileID: 1426439637}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -3599,16 +3600,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1426439631}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: adc4ea8e477d9174d84fdacda4ea24d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   jumpForce: 10
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  rayLength: 0.1
   maxJumps: 2
 --- !u!114 &1426439635
 MonoBehaviour:
@@ -3662,6 +3659,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1426439637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426439631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bf4d774de8d69a44bdf16cadf906c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerLevel2
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  rayLength: 0.1
 --- !u!1 &1463537883 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 323031323126300722, guid: 5eb19bfb5b6907e48938edbab03dcf5e, type: 3}
