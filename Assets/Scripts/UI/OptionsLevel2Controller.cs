@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -7,44 +6,52 @@ namespace UI
 {
     public class OptionsLevel2Controller : MonoBehaviour
     {
-        public GameObject panel; // arraste o painel aqui
-        public Image panelImage; // arraste o componente Image do painel
-        public float tempoMostrar = 1.5f; // tempo em segundos antes de fechar
+        public GameObject panel;
+        public Image panelImage;
+        public float tempoMostrar = 1.5f;
 
         public void WrongOption()
         {
-            StartCoroutine(MostrarPainel(Color.red)); // painel vermelho
+            // Pausa o jogo
+            Time.timeScale = 0f;
+
+            // Ativa o painel e deixa vermelho
+            if (panel != null)
+                panel.SetActive(true);
+
+            if (panelImage != null)
+                panelImage.color = Color.red;
+
+            // Reduz o tempo
             TimerController timer = FindFirstObjectByType<TimerController>();
             if (timer != null)
-                timer.SubtractTime(2f);
+                timer.SubtractTime(5f);
         }
 
         public void RightOption()
         {
-            StartCoroutine(MostrarPainel(Color.green)); // painel verde
+            StartCoroutine(AcertoPainel());
         }
 
-        private IEnumerator MostrarPainel(Color cor)
+        private IEnumerator AcertoPainel()
         {
-            // pausa o jogo
+            // Painel verde
+            if (panel != null)
+                panel.SetActive(true);
+
+            if (panelImage != null)
+                panelImage.color = Color.green;
+
+            // Pausa o jogo
             Time.timeScale = 0f;
 
-            // ativa o painel e muda a cor
-            if (panel != null)
-            {
-                panel.SetActive(true);
-                if (panelImage != null)
-                    panelImage.color = cor;
-            }
-
-            // espera um tempo "em tempo real" (ignora o Time.timeScale)
             yield return new WaitForSecondsRealtime(tempoMostrar);
 
-            // desativa o painel
+            // Fecha painel
             if (panel != null)
                 panel.SetActive(false);
 
-            // volta o tempo do jogo ao normal
+            // Retoma o jogo
             Time.timeScale = 1f;
         }
     }
