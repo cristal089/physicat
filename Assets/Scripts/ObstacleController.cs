@@ -21,7 +21,6 @@ public class ObstacleController : MonoBehaviour
     [SerializeField] Color flashColor; //cor quando o jogador atinge o obstaculo
     [SerializeField] float flashDuration = 0.2f; //tempo de flash do temporizador ao atingir o obstaculo
     SpriteRenderer _sprite;
-    bool isFlashing = false;
 
     void Awake()
     {
@@ -99,13 +98,11 @@ public class ObstacleController : MonoBehaviour
 
     IEnumerator FlashRed()
     {
-        isFlashing = true;
         Color currentColor = _sprite.color;
         _sprite.color = flashColor;
 
         yield return new WaitForSecondsRealtime(flashDuration);
 
         _sprite.color = currentColor;
-        isFlashing = false;
     }
 }

@@ -46,7 +46,7 @@ public class ObstacleSpawnerLevel2 : MonoBehaviour
         {
             if (availablePrefabIndices.Count == 0)
 {
-    Debug.Log("Todos os obstáculos já foram spawnados. Gerando porta...");
+    //Debug.Log("Todos os obstáculos já foram spawnados. Gerando porta...");
 
     // Garante que não chamamos duas vezes
     if (!doorSpawned)
@@ -70,11 +70,11 @@ public class ObstacleSpawnerLevel2 : MonoBehaviour
             int randomObstacle = PickWeightedRandomIndex();
 
             Vector3 spawnPos = spawnPositions[randomPos].transform.position + Vector3.up * 0.1f;
-            Debug.Log("Spawnando prefab: " + randomObstacle);
+            //Debug.Log("Spawnando prefab: " + randomObstacle);
 
             Instantiate(obstaclesPrefabs[randomObstacle], spawnPos, Quaternion.identity);
             var obj = Instantiate(obstaclesPrefabs[randomObstacle], spawnPos, Quaternion.identity);
-Debug.Log("Spawn: " + obj.name + " em " + spawnPos);
+//Debug.Log("Spawn: " + obj.name + " em " + spawnPos);
 
 
             float waitTime = Random.Range(minSpawnInterval, maxSpawnInterval);
@@ -87,7 +87,7 @@ Debug.Log("Spawn: " + obj.name + " em " + spawnPos);
         // Garantir que há algo disponível (deveria estar checado antes)
         if (availablePrefabIndices == null || availablePrefabIndices.Count == 0)
         {
-            Debug.LogWarning("Nenhum prefab disponível para spawn.");
+            //Debug.LogWarning("Nenhum prefab disponível para spawn.");
             return Random.Range(0, obstaclesPrefabs.Count);
         }
 
