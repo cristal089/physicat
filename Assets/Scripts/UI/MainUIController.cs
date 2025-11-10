@@ -12,9 +12,9 @@ namespace UI
 
         void Start()
         {
-            //apenas para testes, apagar depois
-            PlayerPrefs.DeleteAll();
-            PlayerPrefs.Save();
+            ////apenas para testes, apagar depois
+            //PlayerPrefs.DeleteAll();
+            //PlayerPrefs.Save();
         }
 
         public void StartGame()
