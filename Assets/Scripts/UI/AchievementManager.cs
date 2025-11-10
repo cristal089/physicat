@@ -13,6 +13,8 @@ public class AchievementManager : MonoBehaviour
     {
         if (achievements.Count == 0)
         {
+            achievements.Add(new Achievement("20s"));
+
             achievements.Add(new Achievement("30s"));
         }
         LoadAchievements();

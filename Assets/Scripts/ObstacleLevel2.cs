@@ -10,7 +10,6 @@ public class ObstacleLevel2 : MonoBehaviour
     Rigidbody2D _rb;
     Collider2D _collider2D;
 
-    Animator _animator;
     [SerializeField] float aceleration;
 
 
@@ -20,7 +19,6 @@ public class ObstacleLevel2 : MonoBehaviour
     float _currentSpeed;
 
     [SerializeField] LayerMask groundLayer;
-    [SerializeField] float rayLength = 1f; // para detectar o chão
 
     [SerializeField] LayerMask playerLayer;
 
@@ -28,7 +26,6 @@ public class ObstacleLevel2 : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _collider2D = GetComponentInChildren<Collider2D>();
-        _animator = GetComponent<Animator>();
 
         _currentSpeed = baseSpeed;
 

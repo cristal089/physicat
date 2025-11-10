@@ -19,6 +19,10 @@ namespace UI
         {
             SceneManager.LoadScene("Level1Explanation", LoadSceneMode.Single);
         }
+        public void OpenNotebook2()
+        {
+            SceneManager.LoadScene("Level2Explanation", LoadSceneMode.Single);
+        }
 
         public void Level2()
         {
