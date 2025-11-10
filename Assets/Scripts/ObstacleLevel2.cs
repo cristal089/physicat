@@ -10,7 +10,8 @@ public class ObstacleLevel2 : MonoBehaviour
     Rigidbody2D _rb;
     Collider2D _collider2D;
 
-        Animator _animator;
+    Animator _animator;
+    [SerializeField] float aceleration;
 
 
     bool _hasCollided = false;
@@ -65,16 +66,27 @@ public class ObstacleLevel2 : MonoBehaviour
 
             Time.timeScale = 0f;
 
-            if (!painel.activeSelf)
-            {
-                 _animator.enabled = true;
+            StartCoroutine(AccelerateObstacle());
 
-               Destroy(gameObject, 0.5f);
-            }
+            // _animator.enabled = true;
 
-           
+            // Destroy(gameObject, 0.5f);
 
         }
+        IEnumerator AccelerateObstacle()
+{
+    // Acelera gradualmente até atingir a velocidade base + aceleração
+    float targetSpeed = baseSpeed + aceleration;
+
+    while (_currentSpeed < targetSpeed)
+    {
+        _currentSpeed += aceleration * Time.deltaTime;
+        yield return null;
+    }
+
+    _currentSpeed = targetSpeed;
+}
+
     }
     
 }
