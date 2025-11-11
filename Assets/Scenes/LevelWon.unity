@@ -431,8 +431,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 92885b8f2076c30459151e38af52e3d4, type: 3}
-  m_Color: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a8f0f11762a2bea419a729cb5ed53f45, type: 3}
+  m_Color: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -747,7 +747,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a16ebc8effc8844ea91898ab566f462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelWonController
-  levelWonMusic: {fileID: 8300000, guid: fcd5f441b6a38dd4c9fea6195391957c, type: 3}
 --- !u!1 &1277867357
 GameObject:
   m_ObjectHideFlags: 0
