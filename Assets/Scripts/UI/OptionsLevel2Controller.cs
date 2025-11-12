@@ -23,7 +23,7 @@ namespace UI
                 panelImage.color = Color.red;
 
             // Reduz o tempo
-            TimerController timer = FindFirstObjectByType<TimerController>();
+            TimerControllerLevel2 timer = FindFirstObjectByType<TimerControllerLevel2>();
             if (timer != null)
                 timer.SubtractTime(5f);
         }
