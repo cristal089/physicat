@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2743474412940596193, guid: 29a8c7bbe971d4848ad5613954f19457, type: 3}
       propertyPath: m_Name
-      value: ObstacleX
+      value: ObstacleArmario
       objectReference: {fileID: 0}
     - target: {fileID: 4995566448080195216, guid: 29a8c7bbe971d4848ad5613954f19457, type: 3}
       propertyPath: m_LocalPosition.x
@@ -56,6 +56,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -801085144172217356, guid: 45666d4d7a289784c890cadbe07075ea, type: 3}
+    - target: {fileID: 5723030235893654903, guid: 29a8c7bbe971d4848ad5613954f19457, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5723030235893654903, guid: 29a8c7bbe971d4848ad5613954f19457, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 75123911
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

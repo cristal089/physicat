@@ -123,11 +123,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleLevel2
   painel: {fileID: 0}
+  aceleration: 0
   baseSpeed: 5
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  rayLength: 1
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -241,8 +241,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 75123911
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -6184050716912831369, guid: d97882b2497b13c4a91f8d74dda9aaec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
