@@ -1014,7 +1014,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000b568f377ff7ca0a4c74c7a04d15009d8d7212388e5e15938
+  m_ApplyToSortingLayers: 00000000b568f377ff7ca0a4c74c7a04d15009d8d7212388e5e159380f6057bf
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1406,7 +1406,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1532986113
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -5954900996503436756, guid: a5219b07ad73dcf4fbf3400d646ba276, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2349,7 +2349,7 @@ MonoBehaviour:
   player: {fileID: 1426439632}
   groundPosReference: {fileID: 974404728}
   tileCount: 5
-  tileWidth: 30.5
+  tileWidth: 30.7
   scrollSpeed: 3
 --- !u!4 &1895790508
 Transform:
@@ -2566,7 +2566,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -670478127
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -7656984981164158868, guid: 80a35f3e553e7d54ea4ff152b56a432d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.20392157}

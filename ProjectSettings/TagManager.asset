@@ -50,6 +50,9 @@ TagManager:
   - name: Ground
     uniqueID: 2012440757
     locked: 0
+  - name: Door
+    uniqueID: 3210174479
+    locked: 0
   - name: Obstacles
     uniqueID: 75123911
     locked: 0
