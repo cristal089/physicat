@@ -34,8 +34,9 @@ Ou, se for apenas para jogar, acesse <a href=https://cristal089.itch.io/physicat
 ## Créditos
 
 ### Desenvolvimento
-- <a href=https://github.com/anacsalves>Ana Clara - Fase 2</a>
-- <a href=https://github.com/cristal089>Rafaela Cristina - Fase 1</a>
+
+- Fase 1: <a href=https://github.com/cristal089>Rafaela Cristina</a>
+- Fase 2: <a href=https://github.com/anacsalves>Ana Clara</a>
 
 ### Arte
 
