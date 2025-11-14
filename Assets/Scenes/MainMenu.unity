@@ -264,7 +264,7 @@ MonoBehaviour:
   menuMusic: {fileID: 8300000, guid: e29ca74905a794649b98f8d179a33c40, type: 3}
   notebookReadingMusic: {fileID: 8300000, guid: 2c1d71b93fc98f043bcb71afa94635e6, type: 3}
   level1Music: {fileID: 8300000, guid: 63b3849e70771134790bcf4372921a90, type: 3}
-  level2Music: {fileID: 8300000, guid: 63b3849e70771134790bcf4372921a90, type: 3}
+  level2Music: {fileID: 8300000, guid: 0612c7b67173b3d48990a4c9d7b169a1, type: 3}
   levelWonMusic: {fileID: 8300000, guid: fcd5f441b6a38dd4c9fea6195391957c, type: 3}
 --- !u!1 &153738168
 GameObject:
