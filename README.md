@@ -34,8 +34,8 @@ Ou, se for apenas para jogar, acesse <a href=https://cristal089.itch.io/physicat
 ## Créditos
 
 ### Desenvolvimento
-- <a href=https://github.com/anacsalves>Ana Clara</a>
-- <a href=https://github.com/cristal089>Rafaela Cristina</a>
+- <a href=https://github.com/anacsalves>Ana Clara - Fase 2</a>
+- <a href=https://github.com/cristal089>Rafaela Cristina - Fase 1</a>
 
 ### Arte
 
@@ -54,7 +54,8 @@ Ou, se for apenas para jogar, acesse <a href=https://cristal089.itch.io/physicat
 ### Música e sons
 
  - Menu principal, menu de seleção de fases e menu de game over: <a href=https://freesound.org/people/SergeQuadrado/sounds/683392/>SergeQuadrado</a>
-- Diálogos e fases um e dois: <a href=https://freesound.org/people/SergeQuadrado/sounds/701152>SergeQuadrado</a>
+- Diálogo da fase um e fase um: <a href=https://freesound.org/people/SergeQuadrado/sounds/701152>SergeQuadrado</a>
+- Diálogo da fase dois e fase dois: <a href=https://freesound.org/people/CrashBulb/sounds/776023>CrashBulb</a>
 - Tela de anotações:<a href=https://freesound.org/people/holizna/sounds/629152> holizna</a>
 - Fase concluída: <a href=https://freesound.org/people/wi-photos/sounds/480932>wi-photos</a>
 - Obstáculo atingido: <a href=https://freesound.org/people/LilMati/sounds/523769>LilMati</a>
