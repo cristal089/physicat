@@ -1,5 +1,5 @@
 <h1 align="center"> 
-<img src="https://github.com/cristal089/physicat/blob/game-refactor/Assets/Sprites/moira_mugshot_2.png"> 
+<img src="https://cristal089.github.io/physicat/blob/game-refactor/Assets/Sprites/moira_mugshot_2.png"> 
 </h1>
 
 
