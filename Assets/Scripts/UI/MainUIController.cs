@@ -22,6 +22,11 @@ namespace UI
             SceneManager.LoadScene("LevelsMenu", LoadSceneMode.Single);
         }
 
+        public void GameCredits()
+        {
+            SceneManager.LoadScene("GameCredits", LoadSceneMode.Single);
+        }
+
         public void Exit()
         {
             Application.Quit(); //so funciona em uma build fora do editor
