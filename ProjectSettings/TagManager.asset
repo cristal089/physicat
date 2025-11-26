@@ -8,6 +8,7 @@ TagManager:
   - MudGround
   - NormalGround
   - Planet
+  - TurboZone
   layers:
   - Default
   - TransparentFX

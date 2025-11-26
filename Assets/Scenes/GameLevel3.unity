@@ -290,7 +290,7 @@ Transform:
   m_GameObject: {fileID: 119384365}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -343,12 +343,12 @@ SpriteRenderer:
   m_SortingLayerID: -1532986113
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5954900996503436756, guid: a5219b07ad73dcf4fbf3400d646ba276, type: 3}
+  m_Sprite: {fileID: -7758756173567733430, guid: 7d3430908a84213489572c82ef14210b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.3, y: 2.56}
+  m_Size: {x: 2.02, y: 2.9}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -364,8 +364,8 @@ GameObject:
   m_Component:
   - component: {fileID: 215142826}
   m_Layer: 10
-  m_Name: DeadZone
-  m_TagString: Untagged
+  m_Name: TurboZone
+  m_TagString: TurboZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1253,11 +1253,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1029970895}
-  - component: {fileID: 1029970896}
   - component: {fileID: 1029970897}
   m_Layer: 10
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: TurboZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1277,19 +1276,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 215142826}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1029970896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1029970894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45530f42e891480488002818adc71efb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DeadZoneController
-  speechBubble: {fileID: 560127861}
 --- !u!61 &1029970897
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1753,8 +1739,8 @@ GameObject:
   - component: {fileID: 1501768948}
   - component: {fileID: 1501768947}
   - component: {fileID: 1501768945}
-  - component: {fileID: 1501768944}
   - component: {fileID: 1501768949}
+  - component: {fileID: 1501768950}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -1762,28 +1748,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &1501768944
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1501768943}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aaf311254ab5e614e97637e070f33324, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1501768945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1850,7 +1814,7 @@ Transform:
   m_GameObject: {fileID: 1501768943}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.8, z: 0}
+  m_LocalPosition: {x: 0, y: -0.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1871,6 +1835,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerLevel3
   baseSpeed: 1
+  normalTurbo: 6
+  bonusTurbo: 12
+  turboDecay: 10
+  speechBubble: {fileID: 560127861}
+--- !u!95 &1501768950
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501768943}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: df0207fae471b584e8c7e28fc0be080b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1749523355
 GameObject:
   m_ObjectHideFlags: 0
@@ -2454,7 +2444,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.081462145, y: -0.070305586}
+  m_Offset: {x: 0.04022062, y: -1.1198298}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2464,7 +2454,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.94418955, y: 2.4092512}
+  m_Size: {x: 1.8515029, y: 2.8878372}
   m_EdgeRadius: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

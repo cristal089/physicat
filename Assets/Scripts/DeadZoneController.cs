@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class DeadZoneController : MonoBehaviour
+public class TurboZoneController : MonoBehaviour
 {
     Collider2D _collider2D;
 
