@@ -105,7 +105,8 @@ public class PlayerLevel3 : MonoBehaviour
         if (collision.CompareTag("TurboZone"))
         {
             _isInTurboZone = true;
-            speechBubble.SetActive(true);
+            if (speechBubble != null)
+                speechBubble.SetActive(true);
         }
 
         if (collision.CompareTag("Planet"))
@@ -120,7 +121,8 @@ public class PlayerLevel3 : MonoBehaviour
         if (collision.CompareTag("TurboZone"))
         {
             _isInTurboZone = false;
-            speechBubble.SetActive(false);
+            if (speechBubble != null)
+                speechBubble.SetActive(false);
         }
     }
 }
