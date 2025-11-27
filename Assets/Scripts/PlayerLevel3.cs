@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -21,7 +22,10 @@ public class PlayerLevel3 : MonoBehaviour
     bool _isInTurboZone = false;
 
     [SerializeField] GameObject speechBubble;
+    [SerializeField] TextMeshProUGUI amperemeterValue;
     Coroutine turboRoutine;
+
+    [SerializeField] CircuitUI circuit;
 
     void Awake()
     {
@@ -77,17 +81,27 @@ public class PlayerLevel3 : MonoBehaviour
         _animator.SetBool("bonusTurbo", false);
         _animator.SetBool("normalTurbo", false);
 
-        if (_isInTurboZone)
+        if (amperemeterValue.GetParsedText() == "10")
         {
-            _animator.SetBool("bonusTurbo", true);
-            _turboVelocity = bonusTurbo;
-            turboRoutine = StartCoroutine(StopTurboAnimation(1.5f));
+            if (_isInTurboZone)
+            {
+                _animator.SetBool("bonusTurbo", true);
+                _turboVelocity = bonusTurbo;
+                circuit.ExplodeRandomResistor();
+                turboRoutine = StartCoroutine(StopTurboAnimation(1.5f));
+            }
+            else
+            {
+                _animator.SetBool("normalTurbo", true);
+                _turboVelocity = normalTurbo;
+                circuit.ExplodeRandomResistor();
+                turboRoutine = StartCoroutine(StopTurboAnimation(0.5f));
+            }
         }
         else
         {
-            _animator.SetBool("normalTurbo", true);
-            _turboVelocity = normalTurbo;
-            turboRoutine = StartCoroutine(StopTurboAnimation(0.5f));
+            circuit.ExplodeRandomResistor();
+            print("resistor explodiu");
         }
     }
 
