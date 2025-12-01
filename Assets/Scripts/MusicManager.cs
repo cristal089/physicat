@@ -8,11 +8,12 @@ public class MusicManager : MonoBehaviour
 
     private AudioSource audioSource;
 
-    public AudioClip menuMusic;
-    public AudioClip notebookReadingMusic;
-    public AudioClip level1Music;
-    public AudioClip level2Music;
-    public AudioClip levelWonMusic;
+    [SerializeField] AudioClip menuMusic;
+    [SerializeField] AudioClip notebookReadingMusic;
+    [SerializeField] AudioClip level1Music;
+    [SerializeField] AudioClip level2Music;
+    [SerializeField] AudioClip level3Music;
+    [SerializeField] AudioClip GameOverMusic;
 
     private void Awake()
     {
@@ -49,11 +50,11 @@ public class MusicManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         //troca de musica automaticamente entre as scenes
-        if (scene.name == "MainMenu" || scene.name == "LevelsMenu" || scene.name == "GameOver")
+        if (scene.name == "MainMenu" || scene.name == "LevelsMenu" || scene.name == "LevelWon")
         {
             PlayMusic(menuMusic);
         }
-        else if (scene.name == "Level1Explanation")
+        else if (scene.name == "Level1Explanation" || scene.name == "Level2Explanation" || scene.name == "Level3Explanation")
         {
             PlayMusic(notebookReadingMusic);
         }
@@ -65,9 +66,13 @@ public class MusicManager : MonoBehaviour
         {
             PlayMusic(level2Music, 0.5f, 0.5f);
         }
-        else if (scene.name == "LevelWon")
+        else if (scene.name == "Level3Dialogue" || scene.name == "GameLevel3")
         {
-            PlayMusic(levelWonMusic);
+            PlayMusic(level3Music, 0.5f, 0.5f);
+        }
+        else if (scene.name == "GameOver")
+        {
+            PlayMusic(GameOverMusic);
         }
     }
 

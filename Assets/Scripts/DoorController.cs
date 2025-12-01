@@ -22,7 +22,13 @@ public class DoorController : MonoBehaviour
     void LevelWon()
     {
         Time.timeScale = 0f;
-        UnlockNextLevel(2);
+
+        int currentLevel = SceneManager.GetActiveScene().buildIndex;
+        int nextLevel = currentLevel + 1;
+
+        UnlockNextLevel(nextLevel);
+        print("level unlocked");
+
         SceneManager.LoadScene("LevelWon", LoadSceneMode.Single);
     }
 

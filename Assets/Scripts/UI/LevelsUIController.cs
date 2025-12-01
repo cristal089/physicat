@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; //Certifique esse namespace esta sendo usado
+using UnityEngine.SceneManagement;
 
 namespace UI
 {
@@ -27,6 +27,16 @@ namespace UI
         public void Level2()
         {
             SceneManager.LoadScene("Level2Dialogue", LoadSceneMode.Single);
+        }
+
+        public void OpenNotebook3()
+        {
+            SceneManager.LoadScene("Level2Explanation", LoadSceneMode.Single);
+        }
+
+        public void Level3()
+        {
+            SceneManager.LoadScene("GameLevel3", LoadSceneMode.Single);
         }
 
         public void Back()
