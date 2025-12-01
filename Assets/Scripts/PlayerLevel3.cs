@@ -22,10 +22,24 @@ public class PlayerLevel3 : MonoBehaviour
     bool _isInTurboZone = false;
 
     [SerializeField] GameObject speechBubble;
+    [SerializeField] GameObject dangerBubble;
     [SerializeField] TextMeshProUGUI amperemeterValue;
     Coroutine turboRoutine;
 
     [SerializeField] CircuitUI circuit;
+
+    //controle de vitoria da fase
+    [SerializeField] GameObject doorPrefab;
+    [SerializeField] Transform doorSpawnPoint;
+    [SerializeField] bool doorSpawned = false;
+
+    //controle da conquista desbloqueada
+    [SerializeField] AchievementManager achievementManager;
+    [SerializeField] AchievementController achievementController;
+    private bool achievementShown = false;
+
+    //a conquista sera desbloqueada apos usados 2 turbos e o jogador vencera a fase apos usados 3 turbos corretamente
+    int _countTurbo = 0;
 
     void Awake()
     {
@@ -45,13 +59,8 @@ public class PlayerLevel3 : MonoBehaviour
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             Turbo();
-
-            //if (speechActive)
-            //{
-            //    speechBubble.SetActive(false);
-            //    speechActive = false;
-            //}
         }
+        CheckTurboCount();
     }
 
     void FixedUpdate()
@@ -89,6 +98,7 @@ public class PlayerLevel3 : MonoBehaviour
                 _turboVelocity = bonusTurbo;
                 circuit.ExplodeRandomResistor();
                 turboRoutine = StartCoroutine(StopTurboAnimation(1.5f));
+                _countTurbo++;
             }
             else
             {
@@ -100,8 +110,9 @@ public class PlayerLevel3 : MonoBehaviour
         }
         else
         {
+            if (dangerBubble != null)
+                StartCoroutine(ShowSpeechBubble(0.7f));
             circuit.ExplodeRandomResistor();
-            print("resistor explodiu");
         }
     }
 
@@ -113,6 +124,36 @@ public class PlayerLevel3 : MonoBehaviour
         _animator.SetBool("normalTurbo", false);
     }
 
+    IEnumerator ShowSpeechBubble(float duration)
+    {
+        dangerBubble.SetActive(true);
+        yield return new WaitForSeconds(duration);
+        dangerBubble.SetActive(false);
+    }
+
+    void CheckTurboCount()
+    {
+        if(!achievementShown && _countTurbo >= 2 && !achievementManager.IsUnlocked("2turbo"))
+        {
+            achievementManager.UnlockAchievement("2turbo");
+            achievementShown = true;
+        }
+
+        if(!doorSpawned && _countTurbo >= 3)
+        {
+            ObstacleSpawner spawner = FindFirstObjectByType<ObstacleSpawner>();
+
+            if (spawner != null)
+                spawner.StopAllCoroutines();
+            SpawnDoor();
+        }
+    }
+
+    void SpawnDoor()
+    {
+        Instantiate(doorPrefab, doorSpawnPoint.position, Quaternion.identity);
+        doorSpawned = true;
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -125,8 +166,7 @@ public class PlayerLevel3 : MonoBehaviour
 
         if (collision.CompareTag("Planet"))
         {
-            //SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
-            print("game over");
+            SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
         }
     }
 
