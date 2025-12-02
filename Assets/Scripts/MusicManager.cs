@@ -52,7 +52,7 @@ public class MusicManager : MonoBehaviour
         //troca de musica automaticamente entre as scenes
         if (scene.name == "MainMenu" || scene.name == "LevelsMenu" || scene.name == "LevelWon")
         {
-            PlayMusic(menuMusic);
+            PlayMusic(menuMusic, 0.3f, 0.3f);
         }
         else if (scene.name == "Level1Explanation" || scene.name == "Level2Explanation" || scene.name == "Level3Explanation")
         {
@@ -60,19 +60,19 @@ public class MusicManager : MonoBehaviour
         }
         else if (scene.name == "Level1Dialogue" || scene.name == "GameLevel1")
         {
-            PlayMusic(level1Music, 0.5f,0.5f);
+            PlayMusic(level1Music, 0.3f,0.3f);
         }
         else if (scene.name == "Level2Dialogue" || scene.name == "GameLevel2")
         {
-            PlayMusic(level2Music, 0.5f, 0.5f);
+            PlayMusic(level2Music, 0.3f, 0.3f);
         }
         else if (scene.name == "Level3Dialogue" || scene.name == "GameLevel3")
         {
-            PlayMusic(level3Music, 0.5f, 0.5f);
+            PlayMusic(level3Music, 0.3f, 0.2f);
         }
         else if (scene.name == "GameOver")
         {
-            PlayMusic(GameOverMusic);
+            PlayMusic(GameOverMusic, 0.3f, 0.3f);
         }
     }
 

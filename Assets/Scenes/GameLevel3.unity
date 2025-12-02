@@ -2938,6 +2938,11 @@ MonoBehaviour:
   doorSpawned: 0
   achievementManager: {fileID: 1294170324}
   achievementController: {fileID: 110297643}
+  heyVoiceTurbo: {fileID: 8300000, guid: 39c5f002df2911841a647bd5b7c9b5e6, type: 3}
+  heyVoiceDanger: {fileID: 8300000, guid: 3beab636e7c87664ba9a65205feebb57, type: 3}
+  normalTurboSound: {fileID: 8300000, guid: 17381e30f2ffa8149968048e886109f8, type: 3}
+  bonusTurboSound: {fileID: 8300000, guid: e7fa236e610766745b49a61df5758070, type: 3}
+  resistorExploding: {fileID: 8300000, guid: 330afe0ae19775b48a3805266bc1bc1b, type: 3}
 --- !u!95 &1501768950
 Animator:
   serializedVersion: 7

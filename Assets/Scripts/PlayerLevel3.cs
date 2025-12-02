@@ -41,6 +41,13 @@ public class PlayerLevel3 : MonoBehaviour
     //a conquista sera desbloqueada apos usados 2 turbos e o jogador vencera a fase apos usados 3 turbos corretamente
     int _countTurbo = 0;
 
+    //soundeffects
+    [SerializeField] AudioClip heyVoiceTurbo;
+    [SerializeField] AudioClip heyVoiceDanger;
+    [SerializeField] AudioClip normalTurboSound;
+    [SerializeField] AudioClip bonusTurboSound;
+    [SerializeField] AudioClip resistorExploding;
+
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -95,7 +102,9 @@ public class PlayerLevel3 : MonoBehaviour
             if (_isInTurboZone)
             {
                 _animator.SetBool("bonusTurbo", true);
+                AudioSource.PlayClipAtPoint(bonusTurboSound, transform.position);
                 _turboVelocity = bonusTurbo;
+                AudioSource.PlayClipAtPoint(resistorExploding, transform.position);
                 circuit.ExplodeRandomResistor();
                 turboRoutine = StartCoroutine(StopTurboAnimation(1.5f));
                 _countTurbo++;
@@ -103,7 +112,9 @@ public class PlayerLevel3 : MonoBehaviour
             else
             {
                 _animator.SetBool("normalTurbo", true);
+                AudioSource.PlayClipAtPoint(normalTurboSound, transform.position);
                 _turboVelocity = normalTurbo;
+                AudioSource.PlayClipAtPoint(resistorExploding, transform.position);
                 circuit.ExplodeRandomResistor();
                 turboRoutine = StartCoroutine(StopTurboAnimation(0.5f));
             }
@@ -112,6 +123,7 @@ public class PlayerLevel3 : MonoBehaviour
         {
             if (dangerBubble != null)
                 StartCoroutine(ShowSpeechBubble(0.7f));
+            AudioSource.PlayClipAtPoint(resistorExploding, transform.position);
             circuit.ExplodeRandomResistor();
         }
     }
@@ -126,6 +138,7 @@ public class PlayerLevel3 : MonoBehaviour
 
     IEnumerator ShowSpeechBubble(float duration)
     {
+        AudioSource.PlayClipAtPoint(heyVoiceDanger, transform.position);
         dangerBubble.SetActive(true);
         yield return new WaitForSeconds(duration);
         dangerBubble.SetActive(false);
@@ -161,7 +174,10 @@ public class PlayerLevel3 : MonoBehaviour
         {
             _isInTurboZone = true;
             if (speechBubble != null)
+            {
                 speechBubble.SetActive(true);
+                AudioSource.PlayClipAtPoint(heyVoiceTurbo, transform.position);
+            }
         }
 
         if (collision.CompareTag("Planet"))
