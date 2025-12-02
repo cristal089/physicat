@@ -53,7 +53,7 @@ public class DialogueController : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("GameLevel1", LoadSceneMode.Single);
+            SceneManager.LoadScene("GameLevel3", LoadSceneMode.Single);
         }
     }
 
@@ -79,6 +79,6 @@ public class DialogueController : MonoBehaviour
         StopAllCoroutines();
         textComponent.text = lines[_index];
         _isTyping = false;
-        SceneManager.LoadScene("GameLevel1", LoadSceneMode.Single);
+        SceneManager.LoadScene("GameLevel3", LoadSceneMode.Single);
     }
 }

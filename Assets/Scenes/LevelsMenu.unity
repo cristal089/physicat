@@ -1085,7 +1085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35634ee3b1ca1934385bdfd568d3cd81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelButtonUnlock
-  levelNumber: 5
+  levelNumber: 6
   button: {fileID: 721420776}
   _btnImage: {fileID: 1022618429}
 --- !u!1 &744393321
@@ -2671,7 +2671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35634ee3b1ca1934385bdfd568d3cd81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelButtonUnlock
-  levelNumber: 6
+  levelNumber: 7
   button: {fileID: 1600041269}
   _btnImage: {fileID: 373437293}
 --- !u!1 &1690092365

@@ -15,6 +15,16 @@ namespace UI
             SceneManager.LoadScene("Level1Dialogue", LoadSceneMode.Single);
         }
 
+        public void Level2()
+        {
+            SceneManager.LoadScene("Level2Dialogue", LoadSceneMode.Single);
+        }
+
+        public void Level3()
+        {
+            SceneManager.LoadScene("Level3Dialogue", LoadSceneMode.Single);
+        }
+
         public void OpenNotebook1()
         {
             SceneManager.LoadScene("Level1Explanation", LoadSceneMode.Single);
@@ -24,19 +34,9 @@ namespace UI
             SceneManager.LoadScene("Level2Explanation", LoadSceneMode.Single);
         }
 
-        public void Level2()
-        {
-            SceneManager.LoadScene("Level2Dialogue", LoadSceneMode.Single);
-        }
-
         public void OpenNotebook3()
         {
             SceneManager.LoadScene("Level2Explanation", LoadSceneMode.Single);
-        }
-
-        public void Level3()
-        {
-            SceneManager.LoadScene("GameLevel3", LoadSceneMode.Single);
         }
 
         public void Back()
