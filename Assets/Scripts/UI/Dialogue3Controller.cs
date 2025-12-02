@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class Dialogue3Controller : MonoBehaviour
+public class DialogueController : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI textComponent;
     [SerializeField] string[] lines;
@@ -53,7 +53,7 @@ public class Dialogue3Controller : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("GameLevel1", LoadSceneMode.Single);
+            SceneManager.LoadScene("GameLevel3", LoadSceneMode.Single);
         }
     }
 
@@ -79,6 +79,6 @@ public class Dialogue3Controller : MonoBehaviour
         StopAllCoroutines();
         textComponent.text = lines[_index];
         _isTyping = false;
-        SceneManager.LoadScene("GameLevel1", LoadSceneMode.Single);
+        SceneManager.LoadScene("GameLevel3", LoadSceneMode.Single);
     }
 }

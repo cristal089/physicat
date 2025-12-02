@@ -16,6 +16,8 @@ public class AchievementManager : MonoBehaviour
             achievements.Add(new Achievement("20s"));
 
             achievements.Add(new Achievement("30s"));
+
+            achievements.Add(new Achievement("2turbo"));
         }
         LoadAchievements();
     }

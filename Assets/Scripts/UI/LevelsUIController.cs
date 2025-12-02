@@ -36,7 +36,7 @@ namespace UI
 
         public void OpenNotebook3()
         {
-            SceneManager.LoadScene("Level2Explanation", LoadSceneMode.Single);
+            SceneManager.LoadScene("Level3Explanation", LoadSceneMode.Single);
         }
 
         public void Back()

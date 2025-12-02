@@ -563,8 +563,8 @@ GameObject:
   - component: {fileID: 887714141}
   - component: {fileID: 887714143}
   - component: {fileID: 887714142}
-  - component: {fileID: 887714144}
   - component: {fileID: 887714145}
+  - component: {fileID: 887714146}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -632,42 +632,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887714140}
   m_CullTransparentMesh: 1
---- !u!114 &887714144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887714140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fdc74b3e6596a84c85a758c53195ef5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueController
-  textComponent: {fileID: 631367336}
-  lines:
-  - "Ufa! Agora estamos quase alcan\xE7ando o buraco negro."
-  - "A pr\xF3xima sala \xE9 o planet\xE1rio, onde eu estudava os astros da nossa
-    gal\xE1xia. Deve estar tudo destru\xEDdo agora."
-  - "Para passar por essa sala, eu peguei um patinete el\xE9trico que estava jogado
-    no dep\xF3sito."
-  - "Esse patinete \xE9 um antigo experimento que n\xE3o funciona direito, mas que
-    pode nos ajudar. "
-  - "O patinete possui um circuito el\xE9trico respons\xE1vel por ativar o turbo. "
-  - "No circuito, h\xE1 uma fonte de tens\xE3o ajust\xE1vel, quatro resistores e
-    um amper\xEDmetro."
-  - "Enquanto o amper\xEDmetro estiver indicando uma corrente de 10A, o turbo pode
-    ser ativado."
-  - Contudo, toda vez que usamos o turbo, um resistor do circuito queima e a corrente
-    muda.
-  - "Por isso, precisaremos ajustar a tens\xE3o para que a corrente se mantenha sempre
-    em 10A."
-  - "Use as teclas [ z ] e [ x ] para o ajuste da tens\xE3o e [ espa\xE7o ] para
-    ativar o turbo."
-  - Mantenha a corrente em 10A e eu te direi a hora certa de usar o turbo.
-  - "Muito cuidado! Caso o turbo seja ativado na hora errada, um resistor se queimar\xE1
-    e n\xE3o conseguiremos ir muito longe... "
-  textSpeed: 0.05
 --- !u!114 &887714145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -698,6 +662,42 @@ MonoBehaviour:
   m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &887714146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887714140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8310a95bc3a4c5f4c9b8e6fac800eb18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueController
+  textComponent: {fileID: 631367336}
+  lines:
+  - "Ufa! Agora estamos quase alcan\xE7ando o buraco negro."
+  - "A pr\xF3xima sala \xE9 o planet\xE1rio, onde eu estudava os astros da nossa
+    gal\xE1xia. Deve estar tudo destru\xEDdo agora."
+  - "Para passar por essa sala, eu peguei um patinete el\xE9trico que estava jogado
+    no dep\xF3sito."
+  - "Esse patinete \xE9 um antigo experimento que n\xE3o funciona direito, mas que
+    pode nos ajudar. "
+  - "O patinete possui um circuito el\xE9trico respons\xE1vel por ativar o turbo. "
+  - "No circuito, h\xE1 uma fonte de tens\xE3o ajust\xE1vel, quatro resistores e
+    um amper\xEDmetro."
+  - "Enquanto o amper\xEDmetro estiver indicando uma corrente de 10A, o turbo pode
+    ser ativado."
+  - Contudo, toda vez que usamos o turbo, um resistor do circuito queima e a corrente
+    muda.
+  - "Por isso, precisaremos ajustar a tens\xE3o para que a corrente se mantenha sempre
+    em 10A."
+  - "Use as teclas [ z ] e [ x ] para o ajuste da tens\xE3o e [ espa\xE7o ] para
+    ativar o turbo."
+  - Mantenha a corrente em 10A e eu te direi a hora certa de usar o turbo.
+  - "Muito cuidado! Caso o turbo seja ativado na hora errada, um resistor se queimar\xE1
+    e n\xE3o conseguiremos ir muito longe... "
+  textSpeed: 0.05
 --- !u!1 &954794531
 GameObject:
   m_ObjectHideFlags: 0
