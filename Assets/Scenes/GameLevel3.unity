@@ -603,7 +603,7 @@ SpriteRenderer:
   m_SortingLayerID: -2010963497
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: c3ae8001671536f4484723e793a8c61b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -611,7 +611,7 @@ SpriteRenderer:
   m_Size: {x: 38.4, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &300317287
@@ -2077,7 +2077,7 @@ Transform:
   m_GameObject: {fileID: 994860894}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.77, y: 3.6, z: 0}
+  m_LocalPosition: {x: 10.77, y: 2.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2696,8 +2696,8 @@ Transform:
   m_GameObject: {fileID: 1362013437}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 2.4, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.48, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 285869668}
@@ -2933,7 +2933,7 @@ MonoBehaviour:
   dangerBubble: {fileID: 920797628}
   amperemeterValue: {fileID: 2137295741}
   circuit: {fileID: 1409700943}
-  doorPrefab: {fileID: 161682417675450922, guid: e3f598008652dd54ea60332d07d65d07, type: 3}
+  doorPrefab: {fileID: 2655720469812118102, guid: cd0341ad6c32d834bbc14207cbd899f8, type: 3}
   doorSpawnPoint: {fileID: 994860895}
   doorSpawned: 0
   achievementManager: {fileID: 1294170324}
@@ -4158,8 +4158,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -670478127
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -8424989745918227888, guid: 5b1822fd6379eb64fac6ea7e117fe7c2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
