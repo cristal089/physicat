@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5b1822fd6379eb64fac6ea7e117fe7c2
+guid: 6b5c9dc311ec3474eb8c909e44979f0d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8424989745918227888
-    second: scooter_panel_spritesheet_0
+      213: 6350658556112432430
+    second: resistors_spritesheet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,10 +72,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: scooter_panel_spritesheet_0
+      name: resistors_spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1792
-        height: 512
+        y: 192
+        width: 256
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,20 +115,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 05a4c3ea67c641b80800000000000000
-      internalID: -8424989745918227888
+      spriteID: e2d60ee3f42122850800000000000000
+      internalID: 6350658556112432430
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: scooter_panel_spritesheet_1
+      name: resistors_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 1792
-        y: 0
-        width: 1792
-        height: 512
+        x: 0
+        y: 128
+        width: 256
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb2888f20f630dc4582fac028552c09d
-      internalID: -825943262
+      spriteID: e99a1c5f2b5c492488927fb88f43b280
+      internalID: 1701451076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: scooter_panel_spritesheet_2
+      name: resistors_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 3584
-        y: 0
-        width: 1792
-        height: 512
+        x: 0
+        y: 64
+        width: 256
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,8 +159,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0102316fe73fef841a208407648837f9
-      internalID: -746391859
+      spriteID: ea1e68d614713cc42a5780b1ce318676
+      internalID: -787336807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resistors_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df66724ea49af64dad4d03d33ad451e
+      internalID: 465714660
       vertices: []
       indices: 
       edges: []
@@ -169,7 +191,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: af9f098f9695ed247878c478257ac3e2
+    spriteID: 3a00b194a09695c49ab781dfbc22c2a8
     internalID: 0
     vertices: []
     indices: 
@@ -179,11 +201,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1792.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":256.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      scooter_panel_spritesheet_0: -8424989745918227888
-      scooter_panel_spritesheet_1: -825943262
-      scooter_panel_spritesheet_2: -746391859
+      resistors_spritesheet_0: 6350658556112432430
+      resistors_spritesheet_1: 1701451076
+      resistors_spritesheet_2: -787336807
+      resistors_spritesheet_3: 465714660
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

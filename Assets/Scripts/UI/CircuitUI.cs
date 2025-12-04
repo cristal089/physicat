@@ -9,6 +9,7 @@ public class Resistor
 {
     public float resistance;
     public bool isActive = true;
+    public Animator animator;
 }
 
 public class CircuitUI : MonoBehaviour
@@ -108,6 +109,9 @@ public class CircuitUI : MonoBehaviour
         if (index < 0 || index >= resistors.Count) return;
 
         resistors[index].isActive = false;
+
+        if (resistors[index].animator != null)
+            resistors[index].animator.SetTrigger("Dissolve");
 
         UpdateUI();
     }
