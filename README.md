@@ -22,6 +22,8 @@ objetivo é o de auxiliar adolescentes que estão adentrando o Ensino Médio a f
 
 ## Como baixar o jogo
 
+Para abrir, visualizar e/ou editar o projeto pelo Unity, é necessário navegar até a branch `game-refactor` e baixar de lá.
+
 Caso você queira baixar este repositório para auxiliar no desenvolvimento, isso pode ser feito pelo terminal. Será necessário utilizar o Unity.
 
 ```bash
